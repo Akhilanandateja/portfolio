@@ -6,6 +6,7 @@
   <title>Portfolio | Akhilanandateja</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -203,7 +204,7 @@
              The site allows users to browse, book cars, and manage reservations 
              seamlessly, ensuring an efficient user experience.</p>
           <div class="buttons">
-              <a href="https://github.com/Akhilanandateja" class="btn more-btn" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Akhilanandateja/miles-smiles" class="btn more-btn" target="_blank" rel="noopener noreferrer">
                 <i class="fas fa-code"></i> Project Code
             </a>
           </div>
@@ -238,42 +239,5 @@
 </a>
     </div>
   </section>
-<!--Script-->
- <script>
- window.addEventListener('DOMContentLoaded', () => {
-    const lines = [
-        "FromtEnd Development.",
-        "BackEnd Development.",
-        "Data Structures & Algorithms.",
-        "Problem Solving.",
-        "Machine Learning & AI."
-       
-    ];
-    const typedLine = document.getElementById('typed-line');
-    let lineIndex = 0;
-    function typeText(text, callback) {
-        let charIndex = 0;
-        typedLine.style.width = "0"; // Reset width for typing effect
-        // Typing effect
-        const typingInterval = setInterval(() => {
-            typedLine.textContent = text.slice(0, charIndex + 1);
-            charIndex++;
-            typedLine.style.width = `${charIndex}ch`; // Dynamically set width based on characters
-            if (charIndex === text.length) {
-                clearInterval(typingInterval);
-                setTimeout(callback, 1500); // Pause before replacing with next line
-            }
-        }, 100); // Typing speed
-    }
-    function startTypingEffect() {
-        typeText(lines[lineIndex], () => {
-            lineIndex = (lineIndex + 1) % lines.length; // Loop back to the first line
-            startTypingEffect(); // Recursively call the next typing effect
-        });
-    }
-    // Start the typing effect
-    startTypingEffect();
-});
-</script>
 </body>
 </html>
