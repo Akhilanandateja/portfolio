@@ -1,1 +1,1 @@
-Link to Live demo is: https://miles-smiles.wuaze.com/
+Link to Live demo is:
