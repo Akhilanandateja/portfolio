@@ -17,7 +17,7 @@ body {
 header {
   background: black;
   color: white;
-  padding: 20px 0 0 0; /* Remove bottom padding */
+  padding: 20px 0; /* Remove bottom padding */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -43,6 +43,7 @@ nav {
   display: flex;
   align-items: center;
 }
+
 /* Active link style */
 nav a.active {
   color: #fff;
@@ -172,7 +173,7 @@ h2 {
   from {
     opacity: 0;
   }
-  to {
+ to {
     opacity: 1;
   }
 }
@@ -303,7 +304,7 @@ h2 {
   margin: 0; /* Remove default margin */
   margin-right: 5px; /* Reduced space between university name and year */
   font-size: 1.5em; /* Increased font size */
-  color: rgb(77, 77, 195);
+ color: rgb(77, 77, 195);
 }
 
 .education-inline p {
@@ -447,7 +448,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding:  1.5rem;
+  padding: 1.5rem;
   background: #fff;
   border: 2px solid #e0e0e0;
   border-radius: 10px;
@@ -719,5 +720,22 @@ h2 {
 
   .contact a {
     font-size: 1.2rem;
+  }
+
+  .education-section,
+  .experience-section {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .education-content,
+  .experience-content {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .education-details,
+  .experience-details {
+    margin: 10px 0; /* Space between items */
+    text-align: center; /* Center text */
   }
 }
