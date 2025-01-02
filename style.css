@@ -146,11 +146,13 @@ h2 {
 }
 
 .image-container img {
-  width: 400px;
+  width: 100%; /* Make image responsive */
+  max-width: 400px; /* Limit max width */
   height: auto;
   border: 4px solid white;
   border-radius: 50%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6 ```css
+px rgba(0, 0, 0, 0.1);
   animation: fadeIn 1s ease-in-out;
 }
 
@@ -173,7 +175,7 @@ h2 {
   from {
     opacity: 0;
   }
- to {
+  to {
     opacity: 1;
   }
 }
@@ -285,7 +287,7 @@ h2 {
 
 .education-content {
   display: flex; /* Use flexbox to align items */
-  justify-content: space-between; /* Space between content and logo */
+  justify-content : space-between; /* Space between content and logo */
   align-items: center; /* Center items vertically */
 }
 
@@ -304,7 +306,7 @@ h2 {
   margin: 0; /* Remove default margin */
   margin-right: 5px; /* Reduced space between university name and year */
   font-size: 1.5em; /* Increased font size */
- color: rgb(77, 77, 195);
+  color: rgb(77, 77, 195);
 }
 
 .education-inline p {
@@ -339,7 +341,6 @@ h2 {
   font-size: 1.2em; /* Increased font size */
 }
 
-/* Experience Section */
 /* Experience Section */
 .experience-section {
   background-color: black; /* Dark background for the section */
@@ -420,6 +421,7 @@ h2 {
   color: #dddddd; /* Light gray for role description */
   font-size: 1.1em; /* Increased font size */
   margin: 10px 0; /* Space above and below the description */
+ ```css
 }
 
 .responsibilities-list {
@@ -515,21 +517,13 @@ h2 {
   color: #333;
 }
 
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #000; /* Black background */
-  color: #fff; /* White text color */
-}
-
-/* Projects Section */
 .container {
   width: 90%;
   margin: 0 auto;
   margin-bottom: 10px;
 }
 
+/* Projects Section */
 .section {
   display: flex;
   background: #1a1a1a; /* Dark gray background for sections */
@@ -584,7 +578,7 @@ h2 {
   text-decoration: none;
   border-radius: 5px;
   border: 2px solid #DC143C; /* Thin crimson border */
-  font-family: 'Courier New', Courier, monospace; /* Different font for buttons */
+  font-family: 'Courier New', Courier, monos pace; /* Different font for buttons */
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -717,6 +711,7 @@ h2 {
   .social-icons a {
     margin: 0.5rem 0;
   }
+
   .education-section,
   .experience-section {
     padding: 15px; /* Adjust padding for smaller screens */
