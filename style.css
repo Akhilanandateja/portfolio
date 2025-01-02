@@ -360,17 +360,6 @@ h2 {
   font-size: 1.5em; /* Increased font size */
 }
 
-.experience-section {
-  background-color: black; /* Dark background for the section */
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  max-width: 90%;
-  margin: 20px auto; /* Add margin for spacing between sections */
-  position: relative; /* Position relative for background image */
-  overflow: hidden; /* Hide overflow */
-}
-
 .experience-content {
   display: flex; /* Use flexbox to align items */
   justify-content: space-between; /* Space between the two experiences */
@@ -380,11 +369,11 @@ h2 {
 
 .experience-details {
   flex: 1; /* Allow this section to take up available space */
-  margin: 0 20px; /* Space between the two experience sections */
-  min-width: 250px; /* Set a minimum width to prevent squishing */
+  margin: 0 10px; /* Space between the two experience sections */
   color: #ffffff; /* White text for better contrast */
   position: relative; /* Position relative for logo */
 }
+
 .experience-logo {
   width: 50px; /* Size of the logo */
   height: auto;
@@ -403,15 +392,12 @@ h2 {
   .experience-details {
     margin: 10px 0; /* Space between items */
     text-align: center; /* Center text */
-    width: auto; /* Remove minimum width for smaller screens */
   }
 
   .experience-logo {
     width: 40px; /* Decrease logo size for mobile */
   }
 }
-
-
 
 .experience-inline {
   display: flex; /* Use flexbox to align items in a row */
@@ -649,4 +635,169 @@ h2 {
 
 .contact a:hover {
   color: #6e8efb;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  header nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header nav a {
+    margin: 0.5rem 0;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.5em;
+  }
+
+  .hero h2 {
+    font-size: 1.5em;
+  }
+
+  .section {
+    flex-direction: column;
+  }
+
+  .education-content,
+  .experience-content {
+    flex-direction: column;
+  }
+
+  .education-details,
+  .experience-details {
+    margin: 10px 0;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .btn {
+    padding: 8px 12px;
+  }
+
+  .resume-button {
+    padding: 8px 16px;
+  }
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+  .container {
+    width: 100%; /* Full width for mobile */
+    padding: 0 15px; /* Add padding to prevent overflow */
+  }
+
+  .education-section,
+  .experience-section {
+    width: 90%; /* Decrease width for better mobile view */
+    margin: 0 auto; /* Center the sections */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  img {
+    max-width: 100%; /* Ensure images do not exceed their container's width */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .social-icons {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the icons */
+    flex-direction: row; /* Align icons horizontally */
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+    margin: 1rem 0; /* Add margin for spacing */
+  }
+
+  .social-icons a {
+    margin: 0.5rem; /* Adjust margin for spacing */
+  }
+
+  .resume-button {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the button */
+    margin: 1rem auto; /* Center the button with auto margins */
+    padding: 10px 20px; /* Adjust padding */
+    width: 80%; /* Set width for the button */
+  }
+
+  .hero {
+    flex-direction: column; /* Stack hero content vertically */
+    padding: 20px; /* Adjust padding */
+  }
+
+  h1 {
+    font-size: 2em; /* Adjust font size for mobile */
+  }
+
+  h2 {
+    font-size: 1.5em; /* Adjust font size for mobile */
+  }
+
+  .section {
+    padding: 1rem; /* Adjust padding for sections */
+  }
+
+  .education-content,
+  .experience-content {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+    width: 100%; /* Ensure full width */
+  }
+
+  .education-details,
+  .experience-details {
+    margin: 10px 0; /* Space between items */
+    text-align: center; /* Center text */
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-button {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .skill-item {
+    padding: 1rem;
+  }
+
+  .skill-icon {
+    font-size: 2.5rem;
+  }
+
+  .pro-h2 {
+    font-size: 1.2em;
+  }
+
+  .contact a {
+    font-size: 1.2rem;
+  }
+
+  .education-section,
+  .experience-section {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .education-content,
+  .experience-content {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .education-details,
+  .experience-details {
+    margin: 10px 0; /* Space between items */
+    text-align: center; /* Center text */
+  }
 }
