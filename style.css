@@ -689,53 +689,31 @@ h2 {
 }
 
 @media (max-width: 768px) {
-  .hero {
-    padding: 10px;
-  }
-
-  h1 {
-    font-size: 2em;
-  }
-
-  h2 {
-    font-size: 1.5em;
-  }
-
-  .section {
-    padding: 1rem;
-  }
-
-  .contact {
-    padding: 2rem 1rem;
+  .education-section,
+  .experience-section {
+    width: 90%; /* Decrease width for better mobile view */
+    margin: 0 auto; /* Center the sections */
+    padding: 15px; /* Adjust padding for smaller screens */
   }
 
   .social-icons {
-    flex-direction: row; /* Change to row for horizontal alignment */
+    display: flex; /* Use flexbox for alignment */
     justify-content: center; /* Center the icons */
+    flex-direction: row; /* Align icons horizontally */
     flex-wrap: wrap; /* Allow wrapping if necessary */
+    margin: 1rem 0; /* Add margin for spacing */
   }
 
   .social-icons a {
     margin: 0.5rem; /* Adjust margin for spacing */
   }
 
-  .education-section,
-  .experience-section {
-    padding: 15px; /* Adjust padding for smaller screens */
-    overflow: visible; /* Ensure content is not cut off */
-  }
-
-  .education-content,
-  .experience-content {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items */
-    width: 100%; /* Ensure full width */
-  }
-
-  .education-details,
-  .experience-details {
-    margin: 10px 0; /* Space between items */
-    text-align: center; /* Center text */
+  .resume-button {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the button */
+    margin: 1rem auto; /* Center the button with auto margins */
+    padding: 10px 20px; /* Adjust padding */
+    width: 80%; /* Set width for the button */
   }
 }
 
