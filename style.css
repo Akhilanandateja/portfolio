@@ -180,22 +180,41 @@ h2 {
   }
 }
 
-/* Social Icons */
+/* General Styles for Social Icons and Resume Button */
 .social-icons {
-  text-align: left;
-  padding-left: 45px;
-  margin-top: 1rem;
   display: flex;
-  align-items: center; /* Align icons and button properly */
-  flex-wrap: wrap; /* Ensures responsiveness */
+  justify-content: center; /* Center the icons and button */
+  align-items: center; /* Align items vertically */
+  margin: 20px 0; /* Add margin for spacing */
 }
 
 .social-icons a {
-  color: white;
-  margin: 0 1rem;
-  font-size: 1.5rem;
-  transition: color 0.3s, transform 0.3s;
-  text-decoration: none; /* Remove underline */
+  margin: 0 10px; /* Add horizontal spacing between icons */
+  font-size: 24px; /* Adjust icon size */
+  color: #000; /* Change color as needed */
+}
+
+/* Responsive Styles for Mobile View */
+@media only screen and (max-width: 767px) {
+  .social-icons {
+      flex-direction: row; /* Ensure items are in a row */
+      justify-content: space-around; /* Space out items evenly */
+  }
+
+  .resume-button {
+      margin-left: 10px; /* Add margin to the left of the button */
+      padding: 10px 20px; /* Adjust padding for button */
+      font-size: 16px; /* Adjust font size for button */
+      background-color: #007bff; /* Button background color */
+      color: white; /* Button text color */
+      border: none; /* Remove border */
+      border-radius: 5px; /* Rounded corners */
+      text-decoration: none; /* Remove underline */
+  }
+
+  .resume-button:hover {
+      background-color: #0056b3; /* Darker shade on hover */
+  }
 }
 
 .social-icons a:hover {
