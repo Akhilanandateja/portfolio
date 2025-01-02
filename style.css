@@ -710,12 +710,32 @@ h2 {
   }
 
   .social-icons {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row; /* Change to row for horizontal alignment */
+    justify-content: center; /* Center the icons */
+    flex-wrap: wrap; /* Allow wrapping if necessary */
   }
 
   .social-icons a {
-    margin: 0.5rem 0;
+    margin: 0.5rem; /* Adjust margin for spacing */
+  }
+
+  .education-section,
+  .experience-section {
+    padding: 15px; /* Adjust padding for smaller screens */
+    overflow: visible; /* Ensure content is not cut off */
+  }
+
+  .education-content,
+  .experience-content {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+    width: 100%; /* Ensure full width */
+  }
+
+  .education-details,
+  .experience-details {
+    margin: 10px 0; /* Space between items */
+    text-align: center; /* Center text */
   }
 }
 
