@@ -692,47 +692,7 @@ input[type="email"],
 textarea {
   width: 100%; /* Full width for inputs */
   padding: 10px; /* Padding for inputs */
-  border: 1px solid #ccc; /* Border for inputs */
-  border-radius: 5px; /* Rounded corners */
-  background-color: #2a2a2a; /* Dark background for inputs */
-  color: white; /* White text color */
-}
-
-textarea {
-  resize: none; /* Disable resizing */
-}
-
-.send-message-button {
-  background-color: #007bff; /* Button background color */
-  color: white; /* Button text color */
-  padding: 10px 20px; /* Button padding */
-  border: none; /* Remove border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s; /* Transition for hover effect */
-}
-
-.send-message-button:hover {
-  background-color: #0056b3; /* Darker shade on hover */
-}
-
-/* Responsive Styles for Contact Section */
-@media (max-width: 768px) {
-  .contact-content {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items */
-  }
-
-  .social-links {
-    text-align: center; /* Center social links */
-    margin-bottom: 20px; /* Space below social links */
-  }
-
-  .contact-form {
-    padding-left: 0; /* Remove left padding on mobile */
-    width: 100%; /* Full width for contact form */
-  }
-}
+  border: 1px solid #
 /* Responsive Styles */
 @media (max-width: 1200px) {
   header nav {
