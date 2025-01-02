@@ -255,27 +255,23 @@
 </a>
   </div>
 </div>
-<!-- Contact Section -->
-  <section class="contact" id="connect">
-    <hr style="border: 1px solid white; margin: 20px 0;">
-    <div class="con-h2"><h2>Connect</h2></div>
-    <div>
-      <a href="https://www.linkedin.com/in/akhilanandateja-sanga-2296b6294/" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-linkedin"></i>
-    </a>
-    <a href="https://github.com/Akhilanandateja" target="_blank" rel="noopener noreferrer">
-      <i class="fab fa-github"></i>
-  </a>
-      <a href="https://leetcode.com/u/Akhilanandateja/" target="_blank" rel="noopener noreferrer">
-        <i class="fas fa-code"></i>
-    </a>
-    <a href="https://wa.me/918328632167" target="_blank" rel="noopener noreferrer">
-      <i class="fab fa-whatsapp"></i>
-  </a>
-  <a href="mailto:akhilanandatejasanga@gmail.com" target="_blank" rel="noopener noreferrer">
-    <i class="fas fa-envelope"></i>
-</a>
+<div class="contact-form">
+  <h3>Contact Me</h3>
+  <form action="send_email.php" method="POST">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
     </div>
-  </section>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+    </div>
+    <button type="submit" class="send-message-button">Send Message</button>
+  </form>
+</div>
 </body>
 </html>

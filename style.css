@@ -638,24 +638,101 @@ h2 {
 }
 
 .con-h2 {
-  text-align: center;
   margin-bottom: 20px;
   color: #f5d020; /* Bright yellow for the heading */
   letter-spacing: 1px;
   font-size: 1.5em; /* Increased font size */
 }
 
-.contact a {
-  color: white;
-  margin: 0 0.5rem;
-  font-size: 1.5rem;
-  transition: color 0.3s;
+.contact-content {
+  display: flex; /* Use flexbox to align items */
+  justify-content: space-between; /* Space between social links and contact form */
+  align-items: flex-start; /* Align items to the start */
+  margin-top: 20px; /* Space above the content */
 }
 
-.contact a:hover {
-  color: #6e8efb;
+.social-links {
+  flex: 1; /* Allow this section to take up available space */
+  text-align: left; /* Align social links to the left */
 }
 
+.social-links a {
+  margin: 0 10px; /* Add horizontal spacing between icons */
+  font-size: 24px; /* Adjust icon size */
+  color: #f5d020; /* Color for social icons */
+  transition: color 0.3s; /* Transition for hover effect */
+}
+
+.social-links a:hover {
+  color: #ffffff; /* Change color on hover */
+}
+
+.contact-form {
+  flex: 1; /* Allow this section to take up available space */
+  text-align: left; /* Align text to the left */
+  padding-left: 20px; /* Add padding to the left */
+}
+
+.contact-form h3 {
+  margin-bottom: 20px; /* Space below the heading */
+  color: #f5d020; /* Bright yellow for the heading */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Space between form fields */
+}
+
+label {
+  display: block; /* Make labels block elements */
+  margin-bottom: 5px; /* Space below labels */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%; /* Full width for inputs */
+  padding: 10px; /* Padding for inputs */
+  border: 1px solid #ccc; /* Border for inputs */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #2a2a2a; /* Dark background for inputs */
+  color: white; /* White text color */
+}
+
+textarea {
+  resize: none; /* Disable resizing */
+}
+
+.send-message-button {
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  padding: 10px 20px; /* Button padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.send-message-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Responsive Styles for Contact Section */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .social-links {
+    text-align: center; /* Center social links */
+    margin-bottom: 20px; /* Space below social links */
+  }
+
+  .contact-form {
+    padding-left: 0; /* Remove left padding on mobile */
+    width: 100%; /* Full width for contact form */
+  }
+}
 /* Responsive Styles */
 @media (max-width: 1200px) {
   header nav {
