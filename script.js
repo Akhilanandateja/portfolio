@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const lines = [
         "FrontEnd Development.",
         "BackEnd Development.",
-        "Data Structures & Algorithms.",
+        "DSA.",
         "Problem Solving.",
         "Machine Learning & AI."
        
