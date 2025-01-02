@@ -259,6 +259,7 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
 /* Education Section */
 .education-section {
   padding: 40px;
@@ -849,6 +850,87 @@ textarea {
   .experience-details {
     margin: 10px 0; /* Space between items */
     text-align: center; /* Center text */
+  }
+}
+/* Responsive Styles for Education Section */
+@media (max-width: 768px) {
+  .education-cards {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+    align-items: center; /* Center cards */
+  }
+
+  .education-card {
+    width: 80%; /* Make cards wider on smaller screens */
+    margin: 10px 0; /* Space between stacked cards */
+  }
+
+  .school-image {
+    width: 80px; /* Adjust image size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .education-card {
+    width: 90%; /* Make cards full width on very small screens */
+  }
+
+  .school-image {
+    width: 60px; /* Further reduce image size */
+  }
+
+  .education-card h3 {
+    font-size: 1.5em; /* Adjust font size for headings */
+  }
+
+  .education-card .grade,
+  .education-card .description {
+    font-size: 0.9em; /* Adjust font size for text */
+  }
+}
+/* Responsive Styles for Connect Section */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column; /* Stack contact info and form vertically */
+    align-items: center; /* Center items */
+  }
+
+  .contact-info {
+    margin-bottom: 20px; /* Space between contact info and form */
+    text-align: center; /* Center text */
+  }
+
+  .contact-form {
+    width: 90%; /* Make form wider on smaller screens */
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    font-size: 1em; /* Adjust font size for inputs */
+  }
+
+  .send-message-button {
+    width: 100%; /* Full width for button */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-info p {
+    font-size: 1em; /* Adjust font size for contact info */
+  }
+
+  .contact-form h3 {
+    font-size: 1.5em; /* Adjust font size for form heading */
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    font-size: 0.9em; /* Further adjust font size for inputs */
+  }
+
+  .send-message-button {
+    padding: 10px; /* Adjust padding for button */
   }
 }
 /* Footer styles */
