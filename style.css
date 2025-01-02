@@ -7,6 +7,17 @@
   scroll-behavior: smooth;
 }
 
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 body {
   line-height: 1.6;
   background-color: black; /* Light background for contrast */
@@ -658,14 +669,17 @@ h2 {
   display: flex; /* Use flexbox for layout */
   flex-direction: column; /* Stack items vertically */
   align-items: flex-start; /* Align items to the left */
-  margin-top: 150px;
-  margin-left:100px; /* Add some space above the contact info */
+  margin-top: 150px; /* Add some space above the contact info */
 }
 
 .contact-info p {
   margin: 10px 0; /* Space between contact info items */
   display: flex; /* Use flexbox for icon alignment */
-  align-items: center; /* Center items vertically */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: row;
+  font-size: 1.5em; /* Center items vertically */
 }
 
 .contact-info i {
