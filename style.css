@@ -342,16 +342,17 @@ h2 {
 }
 
 /* Experience Section */
+/* Experience Section */
 .experience-section {
-  display:flex;
-  background-color: black; /* Dark background for the section */
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  max-width: 80%;
-  margin: 20px auto; /* Add margin for spacing between sections */
+  display: flex; /* Use flexbox to align items */
+  background-color: #1a1a1a; /* Dark gray background for the section */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* Subtle shadow */
+  padding: 20px; /* Padding for the section */
+  max-width: 80%; /* Limit the maximum width */
+  margin: 20px auto; /* Center the section with margin */
   position: relative; /* Position relative for background image */
-  overflow: hidden; /* Hide overflow */
+  overflow: visible; /* Allow overflow to be visible */
 }
 
 .exp-h2 {
@@ -374,6 +375,9 @@ h2 {
   margin: 0 10px; /* Space between the two experience sections */
   color: #ffffff; /* White text for better contrast */
   position: relative; /* Position relative for logo */
+  padding: 10px; /* Padding for the details */
+  background: #2a2a2a; /* Darker background for details */
+  border-radius: 8px; /* Rounded corners */
 }
 
 .experience-logo {
@@ -421,6 +425,38 @@ h2 {
   margin: 5px 0; /* Space between list items */
   color: #ffffff; /* White for list items */
   font-size: 1.1em; /* Increased font size */
+}
+
+/* Responsive Styles for Experience Section */
+@media (max-width: 768px) {
+  .experience-content {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .experience-details {
+    margin: 10px 0; /* Space between items */
+    text-align: center; /* Center text */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .experience-logo {
+    width: 40px; /* Decrease logo size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-details {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .experience-inline h3 {
+    font-size: 1.5em; /* Adjust font size for mobile */
+  }
+
+  .experience-inline p {
+    font-size: 1em; /* Adjust font size for mobile */
+  }
 }
 
 /* Skills Section */
