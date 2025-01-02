@@ -630,6 +630,7 @@ h2 {
 }
 
 /* Contact Section */
+/* Contact Section */
 .contact {
   padding: 4rem 2rem;
   background: black;
@@ -646,25 +647,26 @@ h2 {
 
 .contact-content {
   display: flex; /* Use flexbox to align items */
-  justify-content: space-between; /* Space between social links and contact form */
+  justify-content: space-between; /* Space between contact info and contact form */
   align-items: flex-start; /* Align items to the start */
   margin-top: 20px; /* Space above the content */
 }
 
-.social-links {
+.contact-info {
   flex: 1; /* Allow this section to take up available space */
-  text-align: left; /* Align social links to the left */
+  text-align: left; /* Align text to the left */
+  padding-right: 20px; /* Add padding to the right */
 }
 
-.social-links a {
-  margin: 0 10px; /* Add horizontal spacing between icons */
-  font-size: 24px; /* Adjust icon size */
-  color: #f5d020; /* Color for social icons */
-  transition: color 0.3s; /* Transition for hover effect */
+.contact-info p {
+  margin: 10px 0; /* Space between contact info items */
+  display: flex; /* Use flexbox for icon alignment */
+  align-items: center; /* Center items vertically */
 }
 
-.social-links a:hover {
-  color: #ffffff; /* Change color on hover */
+.contact-info i {
+  margin-right: 10px; /* Space between icon and text */
+  color: #f5d020; /* Color for icons */
 }
 
 .contact-form {
@@ -692,7 +694,41 @@ input[type="email"],
 textarea {
   width: 100%; /* Full width for inputs */
   padding: 10px; /* Padding for inputs */
-  border: 1px solid #
+  border: 1px solid #ccc; /* Border for inputs */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #2a2a2a; /* Dark background for inputs */
+  color: white; /* White text color */
+}
+
+textarea {
+  resize: none; /* Disable resizing */
+}
+
+.send-message-button {
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  padding: 10px 20px; /* Button padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.send-message-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Responsive Styles for Contact Section */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+  
+  .contact-info, .contact-form {
+    padding: 0; /* Remove padding for smaller screens */
+    margin-bottom: 20px; /* Space between stacked sections */
+  }
+}
 /* Responsive Styles */
 @media (max-width: 1200px) {
   header nav {
