@@ -359,6 +359,7 @@ h2 {
   letter-spacing: 1px;
   font-size: 1.5em; /* Increased font size */
 }
+
 .experience-section {
   background-color: black; /* Dark background for the section */
   border-radius: 12px;
@@ -389,6 +390,26 @@ h2 {
   top: 10px; /* Adjust top position */
   left: 10px; /* Adjust left position */
 }
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  .experience-content {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .experience-details {
+    margin: 10px 0; /* Space between items */
+    text-align: center; /* Center text */
+    width: auto; /* Remove minimum width for smaller screens */
+  }
+
+  .experience-logo {
+    width: 40px; /* Decrease logo size for mobile */
+  }
+}
+
+
 
 .experience-inline {
   display: flex; /* Use flexbox to align items in a row */
