@@ -259,33 +259,47 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
 /* Education Section */
 .education-section {
-  background-color: black; /* Dark background for the section */
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  padding: 30px;
-  max-width: 80%;
-  margin: auto;
-  position: relative; /* Position relative for background image */
-  overflow: hidden; /* Hide overflow */
-  background-image: url('path/to/school-building-drawing.png'); /* Replace with actual image path */
-  background-size: cover; /* Cover the entire section */
-  background-position: center; /* Center the background image */
-  margin-bottom: 10px;
+  padding: 40px;
+  background-color: black;
+  text-align: center;
 }
 
-.university-logo {
-  width: 300px; /* Increased size for better visibility */
-  height: auto;
-  display: block;
-  margin: 0 auto; /* Center the logo */
-  transition: transform 0.3s; /* Smooth scaling effect */
+.education-cards {
+  display: flex;
+  justify-content: space-around; /* Space out the cards */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
-.university-logo:hover {
-  transform: scale(1.1); /* Scale up on hover */
+.education-card {
+  background-color: #1e1e1e;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 30%; /* Adjust width as needed */
+  margin: 10px; /* Space between cards */
+  transition: transform 0.3s;
+}
+
+.education-card:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.school-image {
+  width: 100px; /* Set a fixed width for images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: auto; /* Make images circular */
+}
+
+.grade {
+  font-weight: bold;
+  color: #f5d020; /* Green color for grades */
+}
+
+.description {
+  color: #555; /* Darker gray for description text */
 }
 
 .edu-h2 {
@@ -294,62 +308,6 @@ h2 {
   color: #f5d020; /* Bright yellow for the heading */
   letter-spacing: 1px;
   font-size: 1.5em; /* Increased font size */
-}
-
-.education-content {
-  display: flex; /* Use flexbox to align items */
-  justify-content : space-between; /* Space between content and logo */
-  align-items: center; /* Center items vertically */
-}
-
-.education-details {
-  flex: 1; /* Allow this section to take up available space */
-  margin-right: 10px; /* Reduced space between content and logo */
-  color: #ffffff; /* White text for better contrast */
-}
-
-.education-inline {
-  display: flex; /* Use flexbox to align items in a row */
-  align-items: center; /* Center items vertically */
-}
-
-.education-inline h3 {
-  margin: 0; /* Remove default margin */
-  margin-right: 5px; /* Reduced space between university name and year */
-  font-size: 1.5em; /* Increased font size */
-  color: rgb(77, 77, 195);
-}
-
-.education-inline p {
-  margin: 0; /* Remove default margin */
-  font-size: 1.2em; /* Increased font size */
-  color: #666;
-}
-
-.degree-title {
-  color: #f5d020; /* Bright yellow for degree title */
-  font-size: 1.5em; /* Increased font size */
-}
-
-.cgpa {
-  color: #666; /* Light gray for CGPA */
-  font-size: 1.2em; /* Increased font size */
-}
-
-.course-list {
-  list-style-type: none; /* Remove default list styling */
-  padding: 0; /* Remove padding */
-}
-
-.course-title {
-  color: #f5d020; /* Bright yellow for course title */
-  font-size: 1.5em; /* Increased font size */
-}
-
-.course-item {
-  margin: 5px 0; /* Space between list items */
-  color: #666;
-  font-size: 1.2em; /* Increased font size */
 }
 /* Experience Section */
 .experience-section {
