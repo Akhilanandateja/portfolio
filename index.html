@@ -267,16 +267,22 @@
     </div>
     <div class="contact-form">
       <h3>Contact Me</h3>
-      <form action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="4eef91cc-df56-4349-917e-7f7632feb14d">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name..">
-            <label for="email">Email Address</label>
-            <input type="text" id="email" name="email" placeholder="Your email address..">
-            <label for="message">Message</label>
-            <textarea name="userMessage" placeholder="Message.." id="userMessage" style="height:170px" required></textarea>
-            <input type="submit" value="Submit">
-        </form>
+<form action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="4eef91cc-df56-4349-917e-7f7632feb14d">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name.." required>
+    
+    <label for="email">Email Address</label>
+    <input type="text" id="email" name="email" placeholder="Your email address.." required>
+    
+    <label for="message">Message</label>
+    <textarea name="userMessage" placeholder="Message.." id="userMessage" style="height:170px" required></textarea>
+    
+    <div class="more-btn">
+        <input type="submit" value="Submit" class="send-message-button">
+        <i class="fas fa-paper-plane"></i> <!-- Font Awesome icon -->
+    </div>
+</form>
     </div>
   </div>
 </section>

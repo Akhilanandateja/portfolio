@@ -616,7 +616,6 @@ h2 {
   text-align: center;
   margin: 40px 0;
 }
-
 .more-btn {
   background-color: #000; /* Black button background */
   border: 2px solid #DC143C; /* Thin crimson border */
@@ -704,6 +703,12 @@ textarea {
   resize: none; /* Disable resizing */
 }
 
+.more-btn {
+  display: flex; /* Use flexbox to align items */
+  align-items: center; /* Center items vertically */
+  margin-top: 10px; /* Space above the button */
+}
+
 .send-message-button {
   background-color: #007bff; /* Button background color */
   color: white; /* Button text color */
@@ -712,6 +717,12 @@ textarea {
   border-radius: 5px; /* Rounded corners */
   cursor: pointer; /* Pointer cursor on hover */
   transition: background-color 0.3s; /* Transition for hover effect */
+  display: flex; /* Use flexbox for button */
+  align-items: center; /* Center icon and text */
+}
+
+.send-message-button i {
+  margin-left: 5px; /* Space between text and icon */
 }
 
 .send-message-button:hover {
@@ -721,14 +732,16 @@ textarea {
 /* Responsive Styles for Contact Section */
 @media (max-width: 768px) {
   .contact-content {
-    flex-direction: column; /* Stack items vertically on smaller screens */
+      flex-direction: column; /* Stack items vertically on smaller screens */
   }
   
   .contact-info, .contact-form {
-    padding: 0; /* Remove padding for smaller screens */
-    margin-bottom: 20px; /* Space between stacked sections */
+      padding: 0; /* Remove padding for smaller screens */
+      margin-bottom: 20px; /* Space between stacked sections */
+      text-align: center; /* Center text on smaller screens */
   }
 }
+
 /* Responsive Styles */
 @media (max-width: 1200px) {
   header nav {
