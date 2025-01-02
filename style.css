@@ -688,77 +688,34 @@ h2 {
   }
 }
 
-/* Responsive Styles for Mobile */
 @media (max-width: 768px) {
-  body {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-  }
-
-  .container {
-    width: 100%; /* Full width for mobile */
-    padding: 0 15px; /* Add padding to prevent overflow */
-  }
-
-  .education-section,
-  .experience-section {
-    width: 90%; /* Decrease width for better mobile view */
-    margin: 0 auto; /* Center the sections */
-    padding: 15px; /* Adjust padding for smaller screens */
-  }
-
-  img {
-    max-width: 100%; /* Ensure images do not exceed their container's width */
-    height: auto; /* Maintain aspect ratio */
-  }
-
-  .social-icons {
-    display: flex; /* Use flexbox for alignment */
-    justify-content: center; /* Center the icons */
-    flex-direction: row; /* Align icons horizontally */
-    flex-wrap: wrap; /* Allow wrapping if necessary */
-    margin: 1rem 0; /* Add margin for spacing */
-  }
-
-  .social-icons a {
-    margin: 0.5rem; /* Adjust margin for spacing */
-  }
-
-  .resume-button {
-    display: flex; /* Use flexbox for alignment */
-    justify-content: center; /* Center the button */
-    margin: 1rem auto; /* Center the button with auto margins */
-    padding: 10px 20px; /* Adjust padding */
-    width: 80%; /* Set width for the button */
-  }
-
   .hero {
-    flex-direction: column; /* Stack hero content vertically */
-    padding: 20px; /* Adjust padding */
+    padding: 10px;
   }
 
   h1 {
-    font-size: 2em; /* Adjust font size for mobile */
+    font-size: 2em;
   }
 
   h2 {
-    font-size: 1.5em; /* Adjust font size for mobile */
+    font-size: 1.5em;
   }
 
   .section {
-    padding: 1rem; /* Adjust padding for sections */
+    padding: 1rem;
   }
 
-  .education-content,
-  .experience-content {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items */
-    width: 100%; /* Ensure full width */
+  .contact {
+    padding: 2rem 1rem;
   }
 
-  .education-details,
-  .experience-details {
-    margin: 10px 0; /* Space between items */
-    text-align: center; /* Center text */
+  .social-icons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-icons a {
+    margin: 0.5rem 0;
   }
 }
 
