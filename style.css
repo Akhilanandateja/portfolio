@@ -360,6 +360,17 @@ h2 {
   font-size: 1.5em; /* Increased font size */
 }
 
+.experience-section {
+  background-color: black; /* Dark background for the section */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 90%;
+  margin: 20px auto; /* Add margin for spacing between sections */
+  position: relative; /* Position relative for background image */
+  overflow: hidden; /* Hide overflow */
+}
+
 .experience-content {
   display: flex; /* Use flexbox to align items */
   justify-content: space-between; /* Space between the two experiences */
@@ -369,11 +380,11 @@ h2 {
 
 .experience-details {
   flex: 1; /* Allow this section to take up available space */
-  margin: 0 10px; /* Space between the two experience sections */
+  margin: 0 20px; /* Space between the two experience sections */
+  min-width: 250px; /* Set a minimum width to prevent squishing */
   color: #ffffff; /* White text for better contrast */
   position: relative; /* Position relative for logo */
 }
-
 .experience-logo {
   width: 50px; /* Size of the logo */
   height: auto;
@@ -392,12 +403,15 @@ h2 {
   .experience-details {
     margin: 10px 0; /* Space between items */
     text-align: center; /* Center text */
+    min-width: auto; /* Remove minimum width for smaller screens */
   }
 
   .experience-logo {
     width: 40px; /* Decrease logo size for mobile */
   }
 }
+
+
 
 .experience-inline {
   display: flex; /* Use flexbox to align items in a row */
