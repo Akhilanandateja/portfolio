@@ -343,13 +343,15 @@ h2 {
 
 /* Experience Section */
 .experience-section {
+  display:flex;
   background-color: black; /* Dark background for the section */
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   padding: 20px;
   max-width: 80%;
-  margin: 10px auto; /* Add margin for spacing between sections */
+  margin: 20px auto; /* Add margin for spacing between sections */
   position: relative; /* Position relative for background image */
+  overflow: hidden; /* Hide overflow */
 }
 
 .exp-h2 {
