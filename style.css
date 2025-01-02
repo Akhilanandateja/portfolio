@@ -370,9 +370,8 @@ h2 {
   flex: 1; /* Allow this section to take up available space */
   margin: 0 10px; /* Space between the two experience sections */
   color: #ffffff; /* White text for better contrast */
-  position: relative; /* Position relative for logo */
-  padding: 10px; /* Padding for the details */
-  background: #2a2a2a; /* Darker background for details */
+  position: relative; /* Position relative for logo * /* Padding for the details */
+  background: black; /* Darker background for details */
   border-radius: 8px; /* Rounded corners */
 }
 
