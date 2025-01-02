@@ -345,22 +345,20 @@ h2 {
 /* Experience Section */
 .experience-section {
   display: flex; /* Use flexbox to align items */
+  flex-direction: column; /* Stack title and content vertically */
   background-color: #1a1a1a; /* Dark gray background for the section */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* Subtle shadow */
   padding: 20px; /* Padding for the section */
   max-width: 80%; /* Limit the maximum width */
   margin: 20px auto; /* Center the section with margin */
-  position: relative; /* Position relative for background image */
-  overflow: visible; /* Allow overflow to be visible */
 }
 
-.exp-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #f5d020; /* Bright yellow for the heading */
-  letter-spacing: 1px;
-  font-size: 1.5em; /* Increased font size */
+.experience-title {
+  text-align: center; /* Center the title */
+  margin-bottom: 20px; /* Space below the title */
+  color: #f5d020; /* Bright yellow for the title */
+  font-size: 2em; /* Increased font size for the title */
 }
 
 .experience-content {
@@ -380,29 +378,31 @@ h2 {
   border-radius: 8px; /* Rounded corners */
 }
 
-.experience-logo {
-  width: 50px; /* Size of the logo */
-  height: auto;
-  position: absolute; /* Position the logo */
-  top: 10px; /* Adjust top position */
-  left: 10px; /* Adjust left position */
-}
-
 .experience-inline {
   display: flex; /* Use flexbox to align items in a row */
   align-items: center; /* Center items vertically */
-  margin-left: 70px; /* Add margin to the left to accommodate the logo */
+  margin-bottom: 10px; /* Space below the inline section */
 }
 
-.experience-inline h3 {
-  margin: 0; /* Remove default margin */
-  margin-right: 5px; /* Reduced space between job title and company */
-  font-size: 1.8em; /* Increased font size */
+.experience-logo {
+  width: 40px; /* Size of the logo */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Space between logo and text */
 }
 
-.experience-inline p {
-  margin: 0; /* Remove default margin */
-  font-size: 1.2em; /* Increased font size */
+.experience-info {
+  display: flex; /* Use flexbox to align text items */
+  flex-direction: column; /* Stack text items vertically */
+}
+
+.company-name {
+  color: #f5d020; /* Bright yellow for company name */
+  font-weight: bold; /* Bold text for emphasis */
+}
+
+.years {
+  color: #cccccc; /* Light gray for years */
+  font-size: 0.9em; /* Slightly smaller font size */
 }
 
 .role-description {
@@ -441,7 +441,7 @@ h2 {
   }
 
   .experience-logo {
-    width: 40px; /* Decrease logo size for mobile */
+    width: 30px; /* Decrease logo size for mobile */
   }
 }
 
