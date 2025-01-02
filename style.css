@@ -655,6 +655,11 @@ h2 {
   flex: 1; /* Allow this section to take up available space */
   text-align: left; /* Align text to the left */
   padding-right: 20px; /* Add padding to the right */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Align items to the left */
+  margin-top: 150px;
+  margin-left:100px; /* Add some space above the contact info */
 }
 
 .contact-info p {
@@ -665,7 +670,7 @@ h2 {
 
 .contact-info i {
   margin-right: 10px; /* Space between icon and text */
-  color: #f5d020; /* Color for icons */
+  color: #DC143C; /* Color for icons */
 }
 
 .contact-form {
@@ -703,14 +708,8 @@ textarea {
   resize: none; /* Disable resizing */
 }
 
-.more-btn {
-  display: flex; /* Use flexbox to align items */
-  align-items: center; /* Center items vertically */
-  margin-top: 10px; /* Space above the button */
-}
-
 .send-message-button {
-  background-color: #007bff; /* Button background color */
+  background-color: black; /* Button background color */
   color: white; /* Button text color */
   padding: 10px 20px; /* Button padding */
   border: none; /* Remove border */
@@ -726,7 +725,7 @@ textarea {
 }
 
 .send-message-button:hover {
-  background-color: #0056b3; /* Darker shade on hover */
+  background-color: #DC143C; /* Darker shade on hover */
 }
 
 /* Responsive Styles for Contact Section */
@@ -879,4 +878,18 @@ textarea {
     margin: 10px 0; /* Space between items */
     text-align: center; /* Center text */
   }
+}
+/* Footer styles */
+footer {
+  background-color: black; /* Dark background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Center the text */
+  padding: 10px 0; /* Padding above and below the text */
+  position: relative; /* Positioning for footer */
+  bottom: 0; /* Stick to the bottom */
+  width: 100%; /* Full width */
+}
+
+.footer-content {
+  margin: 0; /* Remove default margin */
 }
