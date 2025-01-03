@@ -32,3 +32,28 @@ window.addEventListener('DOMContentLoaded', () => {
     // Start the typing effect
     startTypingEffect();
 });
+
+//menu
+
+    document.getElementById('menu-icon').addEventListener('click', function() {
+        const navLinks = document.getElementById('nav-links');
+        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex'; // Toggle display
+    });
+
+//go to top
+    const goToTopButton = document.getElementById('go-to-top');
+
+    // Show or hide the button based on scroll position
+    window.onscroll = function() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            goToTopButton.classList.add('show'); // Add class to show button
+        } else {
+            goToTopButton.classList.remove('show'); // Remove class to hide button
+        }
+    };
+
+    // Scroll to the top when the button is clicked
+    goToTopButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default anchor click behavior
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
+    });

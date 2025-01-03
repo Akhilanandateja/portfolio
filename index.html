@@ -21,17 +21,20 @@
   <header>
     <nav>
       <div class="logo">
-        <span class="logo-text">Akhilanandateja's  Portfolio<b>.</b></span>
+        <span class="logo-text">Portfolio<b>.</b></span>
       </div>
+      <div class="menu-icon" id="menu-icon">
+        <i class="fas fa-bars"></i> <!-- Hamburger icon -->
+    </div>
       <div>
-        <a href="#"><i class="fas fa-home"></i> Home</a>
         <a href="#about"><i class="fas fa-user"></i> About</a>
+        <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
+        <a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
         <a href="#skills"><i class="fas fa-code"></i> Skills</a>
         <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
         <a href="#connect"><i class="fas fa-handshake"></i> Connect</a>
       </div>
     </nav>
-    <hr style="border: 1px solid white; margin: 20px 0;">
   </header>
  
   <!-- Hero Section -->
@@ -45,16 +48,36 @@
       <p class="skills1">I'm good at <span id="typed-line" class="skills"></span></p>
     </div>
   </div>
+  <a href="#top" class="go-to-top-button" id="go-to-top">
+    <i class="fas fa-arrow-up"></i>
+</a>
 
   <!---- Resume button -->
   <a href="https://drive.google.com/file/d/1g9Tlz3g3hedWVOU_axLeQ2ks5ulNiocl/view?usp=sharing" target="_blank" class="download-resume-button">
     Download CV<br>    <i class="fas fa-file-download"></i> 
 </a>
-
+<!-- About Section -->
+<div class="about-me" id="about">
+  <div class="pro-h2"><h2>About me</h2></div>
+    <p class="about-description">
+        Hello! I'm <strong class="highlight">Akhilanandateja Sanga</strong>, a dedicated software developer with a fervent passion for harnessing technology to solve complex challenges. My journey in the tech world has been driven by a strong interest in <strong class="highlight">Artificial Intelligence</strong> and <strong class="highlight">Machine Learning</strong>, alongside a solid foundation in <strong class="highlight">full-stack development</strong>. I thrive on the excitement of transforming innovative ideas into functional applications that address real-world needs.
+    </p>
+    <p class="about-description">
+        With a degree in computer science, I have cultivated a diverse skill set that spans <strong class="highlight">AI Engineering</strong>, <strong class="highlight">Full-Stack Development</strong>, and the fundamentals of <strong class="highlight">Android Development</strong>. My experience includes a variety of projects that have not only honed my technical skills but also enhanced my ability to think critically and solve problems effectively. Whether I’m crafting seamless user experiences, architecting robust back-end solutions, or developing intelligent machine learning models, I am committed to delivering high-quality results.
+    </p>
+    <p class="about-description">
+        In my spare time, I love diving into the latest technological advancements, contributing to open-source initiatives, and tackling coding challenges on platforms like <strong class="highlight">LeetCode</strong> and <strong class="highlight">HackerRank</strong>. I am a firm believer in lifelong learning and actively seek to stay informed about emerging trends, tools, and frameworks in the tech landscape.
+    </p>
+    <p class="about-description">
+        My professional journey, enriched by internships and personal projects, has equipped me with a comprehensive understanding of <strong class="highlight">AI methodologies</strong>, <strong class="highlight">web development practices</strong>, <strong class="highlight">database management</strong>, and <strong class="highlight">software engineering principles</strong>. I aspire to work on projects that not only push the boundaries of technology but also create a meaningful impact on society and businesses alike.
+    </p>
+    <p class="about-description">
+        If you’re looking to collaborate, share ideas, or engage in a stimulating tech discussion, I would love to connect. Together, let’s create something extraordinary!
+    </p>
+</div>
   <!-- Education section -->
-  <div class="education-section" id="about">
-    <br><br><br>
-    <div class="edu-h2"><h2>Education</h2></div>
+  <div class="education-section" id="education">
+    <div class="pro-h2"><h2>Education</h2></div>
     <div class="education-cards">
       <div class="education-card">
         <img src="sr.png" alt="SR University" class="school-image"> <!-- Replace with actual image path -->
@@ -82,8 +105,7 @@
   </div>
 
   <!-- Experience Section -->
-  <div class="experience-section">
-    <br><br><br>
+  <div class="experience-section" id="experience">
     <div class="pro-h2"><h2>Experience</h2></div>
     <div class="experience-content">
       <div class="experience-details">
@@ -129,8 +151,7 @@
 
   <!-- Skills Section -->
   <section id="skills" class="skills-section">
-    <br><br><br>
-    <div class="skill-h2"><h2>Skills</h2></div>
+    <div class="pro-h2"><h2>Skills</h2></div>
     <div class="skills-container">
       <div class="skill-item">
         <i class="fab fa-html5 skill-icon" style="color: #e34f26;"></i>
@@ -193,7 +214,7 @@
         <span class="skill-name">Django</span>
       </div>
       <div class="skill-item">
-        <i class="fab fa-github skill-icon" style="color: #333;"></i>
+        <i class="fab fa-github skill-icon" style="color: #ffffff;"></i>
         <span class="skill-name">GitHub</span>
       </div>
       <div class="skill-item">
@@ -205,7 +226,6 @@
 
   <!-- Projects Section -->
   <div class="container" id="projects">
-    <br><br><br><br><br>
     <div class="pro-h2"><h2>Projects</h2></div>
     <div class="section">
       <div class="left">
@@ -252,46 +272,60 @@
       </a>
     </div>
   </div>
-
   <!-- Contact Section -->
-  <section class="contact" id="connect">
-    <br><br><br>
-    <div class="pro-h2"><h2>Contact Me</h2></div>
-    <div class="contact-content">
-     
-        <div class="contact-info">
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/akhilanandateja-sanga-2296b6294/" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/Akhilanandateja" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://leetcode.com/u/Akhilanandateja/" target="_blank">
-                    <i class="fas fa-code"></i>
-                </a>
-            </div>
-        </div>
-        <div class="contact-form">
-            <h2>Get in Touch</h2>
-            <form action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="4eef91cc-df56-4349-917e-7f7632feb14d">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name.." required>
-                
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="Your email address.." required>
-                
-                <label for="message">Message</label>
-                <textarea name="userMessage" placeholder="Message.." id="userMessage" style="height:170px" required></textarea>
+   <div class="container" id="connect">
+    <div class="pro-h2"><h2>Connect</h2></div>
+  <section class="contact-section">
+    <div class="social-icons">
+        <!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-                <div class="more-projects">
-                    <button type="submit" class="btn more-btn">
-                        Submit <i class="fas fa-paper-plane"></i>
-                    </button>
-                </div>
-            </form>
-        </div>
+<!-- Add font awesome icons -->
+<div class="social-icons">
+  <div class="icon-container">
+      <a href="https://www.linkedin.com/in/akhilanandateja-sanga-2296b6294/" class="fa fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
+      <span class="tooltip">LinkedIn</span>
+  </div>
+  <div class="icon-container">
+      <a href="https://github.com/Akhilanandateja" class="fa fa-github" aria-label="GitHub" target="_blank"></a>
+      <span class="tooltip">GitHub</span>
+  </div>
+  <div class="icon-container">
+      <a href="https://www.hackerrank.com/profile/Akhilanandateja" class="fa fa-hackerrank" aria-label="HackerRank" target="_blank"></a>
+      <span class="tooltip">HackerRank</span>
+  </div>
+  <div class="icon-container">
+      <a href="https://leetcode.com/u/Akhilanandateja/" class="fa fa-code" aria-label="Code" target="_blank"></a>
+      <span class="tooltip">LeetCode</span>
+  </div>
+  <div class="icon-container">
+      <a href="mailto:akhilanandatejasanga@gmail.com" class="fa fa-envelope" aria-label="Email" target="_blank"></a>
+      <span class="tooltip">Email</span>
+  </div>
+  <div class="icon-container">
+      <a href="tel:+918328632167" class="fa fa-phone" aria-label="Phone" target="_blank"></a>
+      <span class="tooltip">Phone</span>
+  </div>
+</div>
+    </div>
+    <div class="email-message">
+        <h2>Get in touch</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <div class="more-projects">
+              <button type="submit" class="btn more-btn">
+                  Submit <i class="fas fa-paper-plane"></i>
+              </button>
+          </div>
+        </form>
     </div>
 </section>
   <hr>
