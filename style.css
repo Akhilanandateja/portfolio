@@ -25,34 +25,73 @@ body {
   background-color: black; /* Light background for contrast */
   color: white; /* Dark font color for contrast */
 }
-/*go to top*/
+/* Go to Top Button */
+/* Go to Top Button */
 .go-to-top-button {
   position: fixed; /* Fix the button to the viewport */
   right: 20px; /* Distance from the right edge */
-  bottom: 80px; /* Distance from the bottom edge (adjust as needed) */
+  bottom: 80px; /* Distance from the bottom edge */
   background: linear-gradient(135deg, #6e8efb, #a777e3); /* Gradient background */
   color: white; /* Button text color */
-  width: 40px; /* Set a fixed width */
-  height: 40px; /* Set a fixed height to match width */
+  padding: 10px 15px; /* Padding for the button */
   border: none; /* Remove border */
-  border-radius: 50%; /* Make it circular */
+  border-radius: 30px; /* Rounded corners */
   text-decoration: none; /* Remove underline */
-  font-size: 1.5rem; /* Font size for the icon */
-  display: flex; /* Use flexbox for alignment */
-  align-items: center; /* Center icon vertically */
-  justify-content: center; /* Center icon horizontally */
+  font-size: 1rem; /* Font size */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Shadow for depth */
   transition: background-color 0.3s, transform 0.3s; /* Transition effects */
   z-index: 1000; /* Ensure the button is above other content */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center icon and text vertically */
   opacity: 0; /* Initially hidden */
   visibility: hidden; /* Initially hidden */
-  transition: opacity 0.3s, visibility 0.3s; /* Smooth transition for visibility */
 }
 
 /* Show the button when scrolling down */
 .show {
   opacity: 1; /* Show the button */
   visibility: visible; /* Make it visible */
+}
+
+/* Hover effect for Go to Top button */
+.go-to-top-button:hover {
+  background: linear-gradient(135deg, #597df3, #7441b4); /* Darker gradient on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Download Resume Button */
+.download-resume-button {
+  position: fixed; /* Fix the button to the viewport */
+  right: 20px; /* Distance from the right edge */
+  bottom: 20px; /* Distance from the bottom edge */
+  background: linear-gradient(135deg, #6e8efb, #a777e3); /* Gradient background */
+  color: white; /* Button text color */
+  padding: 10px 15px; /* Padding for the button */
+  border: none; /* Remove border */
+  border-radius: 30px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  font-size: 1rem; /* Font size */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  transition: background-color 0.3s, transform 0.3s; /* Transition effects */
+  z-index: 1000; /* Ensure the button is above other content */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center icon and text vertically */
+}
+
+.download-resume-button i {
+  margin-right: 10px; /* Space between icon and text */
+  font-size: 1.2rem; /* Icon size */
+}
+
+.download-resume-button:hover {
+  background: linear-gradient(135deg, #597df3, #7441b4); /* Darker gradient on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Hover effect for Go to Top button */
+.go-to-top-button:hover {
+  background: linear-gradient(135deg, #597df3, #7441b4); /* Darker gradient on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
 }
 /* Header */
 /* Menu Icon */
@@ -70,9 +109,15 @@ body {
       left: 0; /* Align to the left */
       background: black; /* Background color for dropdown */
       width: 100%; /* Full width */
-      z-index: 100; /* Ensure it appears above other content */
+      z-index: 100; 
+      float: none;
+      display: block;
+      text-align: left;/* Ensure it appears above other content */
   }
-
+  .nav-links-right {
+      float: none;
+    }
+  
   .nav-links a {
       padding: 10px; /* Padding for links */
       text-align: center; /* Center text */
@@ -247,34 +292,6 @@ h2 {
   to {
     opacity: 1;
   }
-}
-/* Resume Button Styling */
-.download-resume-button {
-  position: fixed; /* Fix the button to the viewport */
-  right: 20px; /* Distance from the left edge */
-  bottom: 20px; /* Distance from the bottom edge */
-  background: linear-gradient(135deg, #6e8efb, #a777e3); /* Gradient background */
-  color: white; /* Button text color */
-  padding: 8px 15px; /* Decreased padding for the button */
-  border: none; /* Remove border */
-  border-radius: 30px; /* Rounded corners */
-  text-decoration: none; /* Remove underline */
-  font-size: 1rem; /* Font size */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Shadow for depth */
-  transition: background-color 0.3s, transform 0.3s; /* Transition effects */
-  z-index: 1000; /* Ensure the button is above other content */
-  display: flex; /* Use flexbox for alignment */
-  align-items: center; /* Center icon and text vertically */
-}
-
-.download-resume-button i {
-  margin-right: 10px; /* Space between icon and text */
-  font-size: 1.2rem; /* Icon size */
-}
-
-.download-resume-button:hover {
-  background: linear-gradient(135deg, #597df3, #7441b4); /* Darker gradient on hover */
-  transform: translateY(-2px); /* Lift effect on hover */
 }
 
 /* General Section Styling */
@@ -849,10 +866,17 @@ h2 {
       flex-direction: column;
   }
 
-  .social-icons, .email-message {
+  .email-message {
       width: 100%;
       margin-bottom: 20px;
   }
+  .social-icons {
+    display: flex; /* Use flexbox to align items in a row */
+    justify-content: center; /* Center the icons horizontally */
+    align-items: center; /* Center the icons vertically */
+    flex-wrap: wrap; /* Allow wrapping to the next line on smaller screens */
+    margin-bottom: 20px; /* Space below the icons */
+}
 }
 
 

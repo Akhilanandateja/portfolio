@@ -40,20 +40,22 @@ window.addEventListener('DOMContentLoaded', () => {
         navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex'; // Toggle display
     });
 
-//go to top
-    const goToTopButton = document.getElementById('go-to-top');
+// Get the "Go to Top" button element
+const goToTopButton = document.getElementById('go-to-top');
 
-    // Show or hide the button based on scroll position
-    window.onscroll = function() {
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            goToTopButton.classList.add('show'); // Add class to show button
-        } else {
-            goToTopButton.classList.remove('show'); // Remove class to hide button
-        }
-    };
+// Function to show or hide the button based on scroll position
+window.onscroll = function() {
+    // Check if the user has scrolled down more than 100 pixels
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        goToTopButton.classList.add('show'); // Add class to show button
+    } else {
+        goToTopButton.classList.remove('show'); // Remove class to hide button
+    }
+};
 
-    // Scroll to the top when the button is clicked
-    goToTopButton.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent default anchor click behavior
-        window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
-    });
+// Add click event listener to the button
+goToTopButton.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default anchor click behavior
+    // Smoothly scroll to the top of the page
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
