@@ -738,7 +738,6 @@ h2 {
   display: flex; /* Align icons in a row */
   justify-content: center; /* Center the icons */
   align-items: center; /* Center vertically */
-  margin-top: 20px; /* Space above the icons */
 }
 
 .icon-container {
@@ -763,11 +762,10 @@ h2 {
   z-index: 1; /* Ensure tooltip is above other content */
 }
 
-.icon-container:hover .tooltip {
+.icon-container :hover .tooltip {
   visibility: visible; /* Show tooltip on hover */
   opacity: 1; /* Make tooltip visible */
 }
-
 .social-icons {
   flex: 1;
   display: flex;
