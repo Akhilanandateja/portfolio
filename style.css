@@ -192,6 +192,7 @@ header nav a {
 
 header nav a:hover {
   color: #f5d020;
+  text-decoration:underline;
 }
 
 header .logo {
@@ -211,6 +212,7 @@ header .logo {
 
 .h1 {
   font-family: 'Courier New', Courier, monospace;
+  color: #f5d020;
 }
 
 .text-content {
@@ -220,8 +222,10 @@ header .logo {
 h1 {
     font-size: 3em; /* Font size */
     margin-bottom: 10px; /* Space below the heading */
-    font-family: 'Playfair Display', serif; /* Elegant font family */
+    font-family: 'Montserrat', sans-serif; /* Thicker font family */
     letter-spacing: 0.05em; /* Space between letters */
+    color: #8959c5;
+    font-weight: 700; /* Adjust weight for thickness */
 }
 
 h2 {
@@ -237,7 +241,7 @@ h2 {
 .skills {
   font-size: 1.5em;
   margin-bottom: 10px;
-  color: violet;
+  color: white;
 }
 
 .skills1 {
@@ -506,89 +510,57 @@ h2 {
 
 /* Skills Section */
 .skills-section {
-  padding: 4rem 2rem;
-  text-align: center;
-  background-color: black;
+  padding: 20px; /* Add some padding around the section */
+}
+
+.pro-h2 h2 {
+  text-align: center; /* Center the heading */
+  font-size: 2em; /* Adjust the font size */
+  margin-bottom: 20px; /* Space below the heading */
 }
 
 .skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 2rem;
-  justify-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.skill-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #f5d020; /* Bright yellow for the heading */
-  letter-spacing: 1px;
-  font-size: 1.5em; /* Increased font size */
+  display: flex; /* Use flexbox for horizontal layout */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+  justify-content: center; /* Center the items */
+  gap: 10px; /* Space between icons */
 }
 
 .skill-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-  background: #fff;
-  border: 2px solid #e0e0e0;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; /* Position relative for tooltip */
+  display: flex; /* Flexbox for icon and title */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  width: 100px; /* Increased width for icons */
+  height: 100px; /* Increased height for icons */
+  transition: transform 0.3s; /* Smooth scaling effect */
 }
 
 .skill-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.skill-icon {
-  font-size: 3rem; /* Adjust size for icons */
-  color: #6e8efb; /* Subtle blue color */
-  margin-bottom: 1rem;
-  transition: color 0.3s ease;
-}
-
-@keyframes pop {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
-}
-
-.skill-item:hover .skill-icon {
-  animation: pop 0.5s ease;
-}
-
-.skill-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #333;
-}
-
-.skill-description {
-  font-size: 0.9rem;
-  color: #666;
-  margin-top: 0.5rem;
+  transform: scale(1.1); /* Scale up on hover */
 }
 
 .skill-name {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #333;
+  display: none; /* Hide the skill name by default */
+  position: absolute; /* Position it absolutely */
+  bottom: 70%; /* Position above the icon */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center the tooltip */
+  background-color: #1a1a1a; /* Background color for tooltip */
+  color: white; /* Text color */
+  padding: 5px; /* Padding for tooltip */
+  border-radius: 0px; /* Rounded corners */
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #000; /* Black background */
-  color: #fff; /* White text color */
+.skill-item:hover .skill-name {
+  display: block; /* Show the skill name on hover */
 }
 
+/* If using font-based icons, you can also increase the font size */
+.skill-icon {
+  font-size: 2.5em; /* Increase icon size (adjust as needed) */
+}
 /* Projects Section */
 .container {
   width: 90%;
@@ -646,7 +618,7 @@ body {
 h2 {
   margin-top: 0;
   font-family: 'Montserrat', sans-serif; /* Montserrat font for project titles */
-  color: #DC143C; /* Crimson color for project titles */
+  color: white; /* Crimson color for project titles */
 }
 
 .buttons {
@@ -742,19 +714,6 @@ h2 {
 .fa-code1 {
   background: rgb(216, 109, 109); /* A blue color for code */
 }
-
-/* Email */
-.fa-envelope {
-  background: #D14836; /* A red color for email */
-  color: white;
-}
-
-/* Phone Number */
-.fa-phone {
-  background: #4CAF50; /* A green color for phone */
-  color: white;
-}
-
 
 .contact-section {
   display: flex;
@@ -859,6 +818,110 @@ h2 {
 .email-message button:hover {
   background-color: #DC143C; /* Darker shade on hover */
 }
+.contact-section {
+  display: flex;
+  justify-content: center;
+  gap: 90px; /* Increase the space between items */
+  padding: 60px 20px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  background-color: none;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  text-align: center;
+}
+
+.contact-item .icon {
+  font-size: 28px; /* Larger icon size */
+  color: #D14836;
+  margin-bottom: 15px; /* Add more space between the icon and text */
+}
+
+.contact-item h3 {
+  font-size: 16px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.contact-item p {
+  font-size: 13px;
+  margin: 8px 0 0;
+  color: #aaa;
+}
+
+.contact-item a {
+  color: #D14836;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  margin-top: 30px;
+}
+
+.social-links p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.social-links a {
+  margin: 0 15px; /* Add more space between social icons */
+  font-size: 20px; /* Larger icon size */
+  color: #D14836;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #fff; /* Change color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* Adjust spacing for smaller screens */
+  }
+
+  .contact-item {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-item {
+    width: 120px;
+    height: 120px;
+  }
+
+  .contact-item h3 {
+    font-size: 14px;
+  }
+
+  .contact-item p {
+    font-size: 12px;
+  }
+
+  .contact-item .icon {
+    font-size: 24px;
+  }
+
+  .social-links a {
+    font-size: 18px;
+  }
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -913,6 +976,12 @@ h2 {
 
   .hero h1 {
     font-size: 2.5em;
+    color:#7441b4
+  }
+  .title{
+      font-size: 2.5em;
+      color:#7441b4
+    
   }
 
   .hero h2 {
