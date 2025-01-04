@@ -981,27 +981,53 @@ h2 {
     font-size: 2.5em;
     color:#7441b4
   }
-  .title {
-    font-size: 2.5em; /* Default font size */
-    color: #7441b4; /* Default color */
+  .text-content {
+    padding: 20px; /* Add some padding for better spacing */
+    text-align: center; /* Center the text */
+}
+
+.text-content h2 {
+    font-size: 2em; /* Default font size for h2 */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.text-content .title h1 {
+    font-size: 2.5em; /* Default font size for the title */
+    color: #7441b4; /* Title color */
 }
 
 /* Responsive Styles */
 @media (max-width: 1200px) {
-    .title {
-        font-size: 2.2em; /* Slightly smaller font size for medium screens */
+    .text-content h2 {
+        font-size: 1.8em; /* Adjust h2 size for medium screens */
+    }
+
+    .text-content .title h1 {
+        font-size: 2.2em; /* Adjust title size for medium screens */
     }
 }
 
 @media (max-width: 768px) {
-    .title {
-        font-size: 2em; /* Smaller font size for tablets */
+    .text-content h2 {
+        font-size: 1.5em; /* Adjust h2 size for tablets */
+    }
+
+    .text-content .title h1 {
+        font-size: 2em; /* Adjust title size for tablets */
     }
 }
 
 @media (max-width: 480px) {
-    .title {
-        font-size: 1.8em; /* Even smaller font size for mobile devices */
+    .text-content h2 {
+        font-size: 1.2em; /* Adjust h2 size for mobile devices */
+    }
+
+    .text-content .title h1 {
+        font-size: 1.5em; /* Adjust title size for mobile devices */
+    }
+
+    .text-content p.skills1 {
+        font-size: 1em; /* Adjust font size for skills text */
     }
 }
 
