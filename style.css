@@ -451,6 +451,7 @@ h2 {
 .years {
   color: #cccccc; /* Light gray for years */
   font-size: 0.9em; /* Slightly smaller font size */
+  align-items: flex-start;
 }
 
 .role-description {
@@ -458,11 +459,13 @@ h2 {
   font-size: 1.1em; /* Increased font size */
   margin: 10px 0; 
   text-align: left;/* Space above and below the description */
+  align-items: flex-start;
 }
 
 .responsibilities-list {
   list-style-type: none; /* Remove default list styling */
   padding: 0; /* Remove padding */
+  align-items: flex-start;
 }
 
 .responsibilities-title {
@@ -546,7 +549,7 @@ h2 {
   bottom: 70%; /* Position above the icon */
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Center the tooltip */
-  background-color: #1a1a1a; /* Background color for tooltip */
+  background-color: #1e1e1e; /* Background color for tooltip */
   color: white; /* Text color */
   padding: 5px; /* Padding for tooltip */
   border-radius: 0px; /* Rounded corners */
@@ -978,11 +981,29 @@ h2 {
     font-size: 2.5em;
     color:#7441b4
   }
-  .title{
-      font-size: 2.5em;
-      color:#7441b4
-    
-  }
+  .title {
+    font-size: 2.5em; /* Default font size */
+    color: #7441b4; /* Default color */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .title {
+        font-size: 2.2em; /* Slightly smaller font size for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2em; /* Smaller font size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.8em; /* Even smaller font size for mobile devices */
+    }
+}
 
   .hero h2 {
     font-size: 1.5em;
