@@ -102,7 +102,7 @@ body {
     top: 60px; /* Position below the header */
     left: 0; /* Align to the left */
     background: black; /* Background color for dropdown */
-    width: 100%; /* Full width */
+    width:  100%; /* Full width */
     z-index: 100; 
     float: none;
     display: block;
@@ -121,46 +121,9 @@ body {
   .menu-icon {
     display: block; /* Show menu icon on mobile */
   }
-
-  header {
-    flex-direction: column; /* Stack items vertically */
-    padding: 10px; /* Reduce padding */
-  }
-
-  .logo-text {
-    font-size: 1.2rem; /* Adjust logo size */
-  }
-
-  .hero {
-    flex-direction: column; /* Stack hero content vertically */
-    padding: 20px; /* Reduce padding */
-    text-align: center; /* Center text */
-  }
-
-  .hero h1 {
-    font-size: 2em; /* Adjust heading size */
-  }
-
-  .hero .text-content {
-    max-width: 100%; /* Allow full width */
-  }
-
-  .education-cards {
-    flex-direction: column; /* Stack cards vertically */
-    align-items: center; /* Center cards */
-  }
-
-  .education-card {
-    width: 90%; /* Full width for cards */
-    margin: 10px 0; /* Space between cards */
-  }
-
-  .school-image {
-    width: 80px; /* Adjust image size */
-  }
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .header a {
     float: none;
     display: block;
@@ -170,38 +133,8 @@ body {
   .header-right {
     float: none;
   }
-
-  .hero h1 {
-    font-size: 1.8em; /* Further adjust heading size */
-  }
-
-  .hero .text-content {
-    padding: 0 10px; /* Add padding for smaller screens */
-  }
 }
 
-@media (max-width: 480px) {
-  .contact-item {
-    width: 100px; /* Adjust width for mobile */
-    height: 100px; /* Adjust height for mobile */
-  }
-
-  .contact-item h3 {
-    font-size: 12px; /* Adjust font size for mobile */
-  }
-
-  .contact-item p {
-    font-size: 10px; /* Adjust font size for mobile */
-  }
-
-  .contact-item .icon {
-    font-size: 20px; /* Adjust icon size for mobile */
-  }
-
-  .social-links a {
-    font-size: 16px; /* Adjust icon size for mobile */
-  }
-}
 header {
   background: black;
   color: white;
@@ -374,6 +307,7 @@ h2 {
     opacity: 1;
   }
 }
+
 /* General Section Styling */
 .section {
   padding: 2rem;
@@ -413,6 +347,80 @@ h2 {
   line-height: 1.8; /* Improved line height for readability */
   margin-bottom: 15px; /* Space below each paragraph */
   color: rgba(255, 255, 255, 0.893); /* Dark gray text color */
+}
+/* Responsive Styles for Header */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Stack items vertically */
+    padding: 10px; /* Reduce padding */
+  }
+
+  .logo-text {
+    font-size: 1.2rem; /* Adjust logo size */
+  }
+
+  .nav-links {
+    display: none; /* Hide links by default on mobile */
+    flex-direction: column; /* Stack links vertically */
+    position: absolute; /* Position absolute for dropdown */
+    top: 60px; /* Position below the header */
+    left: 0; /* Align to the left */
+    background: black; /* Background color for dropdown */
+    width: 100%; /* Full width */
+    z-index: 100; 
+  }
+
+  .menu-icon {
+    display: block; /* Show menu icon on mobile */
+  }
+}
+
+/* Responsive Styles for Hero Section */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Stack hero content vertically */
+    padding: 20px; /* Reduce padding */
+    text-align: center; /* Center text */
+  }
+
+  .hero h1 {
+    font-size: 2em; /* Adjust heading size */
+  }
+
+  .hero .text-content {
+    max-width: 100%; /* Allow full width */
+  }
+}
+
+/* Responsive Styles for Education Section */
+@media (max-width: 768px) {
+  .education-cards {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards */
+  }
+
+  .education-card {
+    width: 90%; /* Full width for cards */
+    margin: 10px 0; /* Space between cards */
+  }
+
+  .school-image {
+    width: 80px; /* Adjust image size */
+  }
+}
+
+/* Responsive Styles for Projects Section */
+@media (max-width: 768px) {
+  .projects-section {
+    display: flex; /* Flexbox for projects */
+    flex-direction: column; /* Stack projects vertically */
+    align-items: center; /* Center projects */
+  }
+
+  .project-card {
+    width: 90%; /* Full width for project cards */
+    margin: 10px 0; /* Space between project cards */
+  }
 }
 /* Education Section */
 .education-section {
@@ -470,8 +478,7 @@ h2 {
   display: flex; /* Use flexbox to align items */
   flex-direction: column; /* Stack title and content vertically */
   background-color: black; /* Dark gray background for the section */
-  border-radius: 8px; ```css
-  /* Rounded corners */
+  border-radius: 8px; /* Rounded corners */
   box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* Subtle shadow */
   padding: 30px; /* Padding for the section */
   max-width: 100%; /* Limit the maximum width */
@@ -560,7 +567,6 @@ h2 {
     margin: 10px 0; /* Space between items */
     text-align: left; /* Align text to the left */
     padding: 15px; /* Adjust padding for smaller screens */
-    width: 90%; /* Full width for details */
   }
 
   .experience-logo {
@@ -601,7 +607,6 @@ h2 {
   justify-content: center; /* Center items horizontally */
   width: 100px; /* Increased width for icons */
   height: 100px; /* Increased height for icons */
- ```css
   transition: transform 0.3s; /* Smooth scaling effect */
 }
 
@@ -739,7 +744,7 @@ h2 {
   padding: 4rem 2rem;
   background: black;
   color: white;
-  text-align : left; /* Align text to the left */
+  text-align: left; /* Align text to the left */
 }
 
 .con-h2 {
@@ -888,7 +893,7 @@ h2 {
 }
 
 .icon img:hover {
-  transform: scale (1.1);
+  transform: scale(1.1);
 }
 
 .email-message {
@@ -1049,15 +1054,15 @@ h2 {
     font-size: 24px; /* Adjust icon size for mobile */
   }
 
-  . ```css
-.social-links a {
+  .social-links a {
     font-size: 18px; /* Adjust icon size for mobile */
   }
 }
 
 /* Footer styles */
 footer {
-  background-color: black; /* Dark background color */
+  background-color: black; 
+/* Dark background color */
   color: #fff; /* White text color */
   text-align: center; /* Center the text */
   padding: 10px 0; /* Padding above and below the text */
