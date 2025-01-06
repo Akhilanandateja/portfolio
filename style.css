@@ -151,7 +151,31 @@ nav {
   display: flex;
   align-items: center;
 }
+/* Navigation Links */
+.nav-links {
+  display: none; /* Hide links by default */
+  flex-direction: column; /* Stack links vertically */
+  position: absolute; /* Position absolute for dropdown */
+  top: 60px; /* Position below the header */
+  left: 0; /* Align to the left */
+  background: black; /* Background color for dropdown */
+  width: 100%; /* Full width */
+  z-index: 100; 
+}
 
+.nav-links.active {
+  display: flex; /* Show links when active */
+}
+
+/* Menu Icon */
+.menu-icon {
+  display: block; /* Show menu icon on mobile */
+}
+
+/* Close Icon */
+.close-icon {
+  display: none; /* Hide by default */
+}
 /* Logo Container */
 .logo {
   display: flex;
