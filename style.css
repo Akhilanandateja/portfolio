@@ -392,7 +392,7 @@ h2 {
   }
 }
 
-/* Responsive Styles for Education Cards */
+/* Responsive Styles for Education Section */
 @media (max-width: 768px) {
   .education-cards {
     flex-direction: column; /* Stack cards vertically */
@@ -409,7 +409,7 @@ h2 {
   }
 }
 
-/* Responsive Styles for Project Cards */
+/* Responsive Styles for Projects Section */
 @media (max-width: 768px) {
   .projects-section {
     display: flex; /* Flexbox for projects */
@@ -422,24 +422,345 @@ h2 {
     margin: 10px 0; /* Space between project cards */
   }
 }
-
-/* Responsive Styles for Go to Top Button */
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .go-to-top-button {
-    right: 10px; /* Adjust position for mobile */
-    bottom: 60px; /* Adjust position for mobile */
-    padding: 8px 12px; /* Reduce padding */
-    font-size: 0.9rem; /* Smaller font size */
+  .contact-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* Adjust spacing for smaller screens */
+  }
+
+  .contact-item {
+    margin-bottom: 20px;
   }
 }
 
-/* Responsive Styles for Download Resume Button */
+@media (max-width: 480px) {
+  .contact-item {
+    width: 120px;
+    height: 120px;
+  }
+
+  .contact-item h3 {
+    font-size: 14px;
+  }
+
+  .contact-item p {
+    font-size: 12px;
+  }
+
+  .contact-item .icon {
+    font-size: 24px;
+  }
+
+  .social-links a {
+    font-size: 18px;
+  }
+}
+
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .download-resume-button {
-    right: 10px; /* Adjust position for mobile */
-    bottom: 10px; /* Adjust position for mobile */
-    padding: 8px 12px; /* Reduce padding */
-    font-size: 0.9rem; /* Smaller font size */
+  .contact-section {
+      flex-direction: column;
+  }
+
+  .email-message {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+  .social-icons {
+    display: flex; /* Use flexbox to align items in a row */
+    justify-content: center; /* Center the icons horizontally */
+    align-items: center; /* Center the icons vertically */
+    flex-wrap: wrap; /* Allow wrapping to the next line on smaller screens */
+    margin-bottom: 20px; /* Space below the icons */
+}
+}
+
+
+
+
+/* Responsive Styles for Contact Section */
+@media (max-width: 768px) {
+  .contact-content {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+  
+  .contact-info, .contact-form {
+      padding: 0; /* Remove padding for smaller screens */
+      margin-bottom: 20px; /* Space between stacked sections */
+      text-align: center; /* Center text on smaller screens */
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  header nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header nav a {
+    margin: 0.5rem 0;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.5em;
+    color:#7441b4
+  }
+  .text-content {
+    padding: 20px; /* Add some padding for better spacing */
+    text-align: center; /* Center the text */
+}
+
+.text-content h2 {
+    font-size: 2em; /* Default font size for h2 */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.text-content .title h1 {
+    font-size: 2.5em; /* Default font size for the title */
+    color: #7441b4; /* Title color */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .text-content h2 {
+        font-size: 1.8em; /* Adjust h2 size for medium screens */
+    }
+
+    .text-content .title h1 {
+        font-size: 2.2em; /* Adjust title size for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .text-content h2 {
+        font-size: 1.5em; /* Adjust h2 size for tablets */
+    }
+
+    .text-content .title h1 {
+        font-size: 2em; /* Adjust title size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .text-content h2 {
+        font-size: 1.2em; /* Adjust h2 size for mobile devices */
+    }
+
+    .text-content .title h1 {
+        font-size: 1.5em; /* Adjust title size for mobile devices */
+    }
+
+    .text-content p.skills1 {
+        font-size: 1em; /* Adjust font size for skills text */
+    }
+}
+
+  .hero h2 {
+    font-size: 1.5em;
+  }
+
+  .section {
+    flex-direction: column;
+  }
+
+  .education-content,
+  .experience-content {
+    flex-direction: column;
+  }
+
+  .education-details,
+  .experience-details {
+    margin: 10px 0;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .btn {
+    padding: 8px 12px;
+  }
+
+  .resume-button {
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .section {
+    padding: 1rem;
+  }
+
+  .contact {
+    padding: 2rem 1rem;
+  }
+
+  .social-icons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-icons a {
+    margin: 0.5rem 0;
+  }
+
+  .education-section,
+  .experience-section {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .education-content,
+  .experience-content {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .education-details,
+  .experience-details {
+    margin: 10px 0; /* Space between items */
+    text-align: center; /* Center text */
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-button {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .skill-item {
+    padding: 1rem;
+  }
+
+  .skill-icon {
+    font-size: 2.5rem;
+  }
+
+  .pro-h2 {
+    font-size: 1.2em;
+  }
+
+  .contact a {
+    font-size: 1.2rem;
+  }
+
+  .education-section,
+  .experience-section {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .education-content,
+  .experience-content {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .education-details,
+  .experience-details {
+    margin: 10px 0; /* Space between items */
+    text-align: center; /* Center text */
+  }
+}
+/* Responsive Styles for Education Section */
+@media (max-width: 768px) {
+  .education-cards {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+    align-items: center; /* Center cards */
+  }
+
+  .education-card {
+    width: 80%; /* Make cards wider on smaller screens */
+    margin: 10px 0; /* Space between stacked cards */
+  }
+
+  .school-image {
+    width: 80px; /* Adjust image size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .education-card {
+    width: 90%; /* Make cards full width on very small screens */
+  }
+
+  .school-image {
+    width: 60px; /* Further reduce image size */
+  }
+
+  .education-card h3 {
+    font-size: 1.5em; /* Adjust font size for headings */
+  }
+
+  .education-card .grade,
+  .education-card .description {
+    font-size: 0.9em; /* Adjust font size for text */
+  }
+}
+/* Responsive Styles for Connect Section */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column; /* Stack contact info and form vertically */
+    align-items: center; /* Center items */
+  }
+
+  .contact-info {
+    margin-bottom: 20px; /* Space between contact info and form */
+    text-align: center; /* Center text */
+  }
+
+  .contact-form {
+    width: 90%; /* Make form wider on smaller screens */
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    font-size: 1em; /* Adjust font size for inputs */
+  }
+
+  .send-message-button {
+    width: 100%; /* Full width for button */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-info p {
+    font-size: 1em; /* Adjust font size for contact info */
+  }
+
+  .contact-form h3 {
+    font-size: 1.5em; /* Adjust font size for form heading */
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    font-size: 0.9em; /* Further adjust font size for inputs */
+  }
+
+  .send-message-button {
+    padding: 10px; /* Adjust padding for button */
   }
 }
 /* Education Section */
@@ -1100,4 +1421,4 @@ footer {
   footer {
     padding: 20px 0; /* Increase padding for mobile */
   }
-    }
+  }
