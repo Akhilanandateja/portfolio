@@ -93,7 +93,7 @@ body {
   cursor: pointer; /* Pointer cursor for the menu icon */
 }
 
-/* Responsive Styles */
+/* Responsive Styles for Header */
 @media (max-width: 768px) {
   .nav-links {
     display: none; /* Hide links by default on mobile */
@@ -102,27 +102,18 @@ body {
     top: 60px; /* Position below the header */
     left: 0; /* Align to the left */
     background: black; /* Background color for dropdown */
-    width:  100%; /* Full width */
+    width: 100%; /* Full width */
     z-index: 100; 
-    float: none;
-    display: block;
-    text-align: left; /* Ensure it appears above other content */
   }
-  .nav-links-right {
-    float: none;
-  }
-  
-  .nav-links a {
-    padding: 10px; /* Padding for links */
-    text-align: left; /* Align text to the left */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Optional: border between links */
+
+  .nav-links.active {
+    display: flex; /* Show links when active */
   }
 
   .menu-icon {
     display: block; /* Show menu icon on mobile */
   }
 }
-
 @media screen and (max-width: 500px) {
   .header a {
     float: none;
