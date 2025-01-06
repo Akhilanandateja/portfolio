@@ -813,7 +813,22 @@ h2 {
   letter-spacing: 1px;
   font-size: 1.5em; /* Increased font size */
 }
+/* Responsive Styles for Education Cards */
+@media (max-width: 768px) {
+  .education-cards {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards */
+  }
 
+  .education-card {
+    width: 90%; /* Full width for cards */
+    margin: 10px 0; /* Space between cards */
+  }
+
+  .school-image {
+    width: 80px; /* Adjust image size */
+  }
+}
 /* Experience Section */
 .experience-section {
   display: flex; /* Use flexbox to align items */
