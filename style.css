@@ -315,6 +315,73 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+/* Header Styles */
+header {
+  background: black;
+  color: white;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between; /* Space between logo and nav */
+  align-items: center; /* Center items vertically */
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex; /* Horizontal layout for links */
+  list-style: none; /* Remove default list styling */
+}
+
+.nav-links a {
+  color: white; /* Link color */
+  text-decoration: none; /* Remove underline */
+  padding: 10px 15px; /* Padding for links */
+  transition: color 0.3s; /* Transition for hover effect */
+}
+
+/* Menu Icon */
+.menu-icon {
+  display: none; /* Hide by default */
+  cursor: pointer; /* Pointer cursor for the menu icon */
+}
+
+/* Close Icon */
+.close-icon {
+  display: none; /* Hide by default */
+  cursor: pointer; /* Pointer cursor for the close icon */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide links by default on mobile */
+    flex-direction: column; /* Stack links vertically */
+    position: absolute; /* Position absolute for dropdown */
+    top: 60px; /* Position below the header */
+    left: 0; /* Align to the left */
+    background: black; /* Background color for dropdown */
+    width: 100%; /* Full width */
+    z-index: 100; 
+  }
+
+  .nav-links.active {
+    display: flex; /* Show links when active */
+  }
+
+  .menu-icon {
+    display: block; /* Show menu icon on mobile */
+  }
+
+  .close-icon {
+    display: block; /* Show close icon when menu is open */
+    color: white; /* Close icon color */
+    padding: 10px; /* Padding for close icon */
+  }
+}
+
 
 /* About Section */
 .about-me {
