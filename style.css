@@ -392,7 +392,7 @@ h2 {
   }
 }
 
-/* Responsive Styles for Education Section */
+/* Responsive Styles for Education Cards */
 @media (max-width: 768px) {
   .education-cards {
     flex-direction: column; /* Stack cards vertically */
@@ -409,7 +409,7 @@ h2 {
   }
 }
 
-/* Responsive Styles for Projects Section */
+/* Responsive Styles for Project Cards */
 @media (max-width: 768px) {
   .projects-section {
     display: flex; /* Flexbox for projects */
@@ -420,6 +420,26 @@ h2 {
   .project-card {
     width: 90%; /* Full width for project cards */
     margin: 10px 0; /* Space between project cards */
+  }
+}
+
+/* Responsive Styles for Go to Top Button */
+@media (max-width: 768px) {
+  .go-to-top-button {
+    right: 10px; /* Adjust position for mobile */
+    bottom: 60px; /* Adjust position for mobile */
+    padding: 8px 12px; /* Reduce padding */
+    font-size: 0.9rem; /* Smaller font size */
+  }
+}
+
+/* Responsive Styles for Download Resume Button */
+@media (max-width: 768px) {
+  .download-resume-button {
+    right: 10px; /* Adjust position for mobile */
+    bottom: 10px; /* Adjust position for mobile */
+    padding: 8px 12px; /* Reduce padding */
+    font-size: 0.9rem; /* Smaller font size */
   }
 }
 /* Education Section */
@@ -1080,4 +1100,4 @@ footer {
   footer {
     padding: 20px 0; /* Increase padding for mobile */
   }
-}
+    }
