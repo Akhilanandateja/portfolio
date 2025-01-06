@@ -59,3 +59,11 @@ goToTopButton.addEventListener('click', function(event) {
     // Smoothly scroll to the top of the page
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+
+
+
+document.getElementById('menu-icon').addEventListener('click', function() {
+  const navLinks = document.getElementById('nav-links');
+  navLinks.classList.toggle('show'); // Toggle the 'show' class
+});
