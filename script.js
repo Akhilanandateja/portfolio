@@ -66,9 +66,18 @@ goToTopButton.addEventListener('click', function(event) {
 // script.js
 document.addEventListener("DOMContentLoaded", function() {
   const menuIcon = document.getElementById("menu-icon");
+  const closeIcon = document.getElementById("close-icon");
   const navLinks = document.getElementById("nav-links");
 
   menuIcon.addEventListener("click", function() {
-    navLinks.classList.toggle("active"); // Toggle the 'active' class
+    navLinks.classList.add("active"); // Show the navigation links
+    menuIcon.style.display = "none"; // Hide the hamburger icon
+    closeIcon.style.display = "block"; // Show the close icon
+  });
+
+  closeIcon.addEventListener("click", function() {
+    navLinks.classList.remove("active"); // Hide the navigation links
+    menuIcon.style.display = "block"; // Show the hamburger icon
+    closeIcon.style.display = "none"; // Hide the close icon
   });
 });
