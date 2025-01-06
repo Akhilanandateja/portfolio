@@ -63,7 +63,12 @@ goToTopButton.addEventListener('click', function(event) {
 
 
 
-document.getElementById('menu-icon').addEventListener('click', function() {
-  const navLinks = document.getElementById('nav-links');
-  navLinks.classList.toggle('show'); // Toggle the 'show' class
+// script.js
+document.addEventListener("DOMContentLoaded", function() {
+  const menuIcon = document.getElementById("menu-icon");
+  const navLinks = document.getElementById("nav-links");
+
+  menuIcon.addEventListener("click", function() {
+    navLinks.classList.toggle("active"); // Toggle the 'active' class
+  });
 });
