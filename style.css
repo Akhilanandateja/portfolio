@@ -88,71 +88,78 @@ body {
 }
 
 /* Header */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 60px; /* Increased padding for more space */
-  background-color: black;
-  color: #fff;
-  flex-wrap: wrap;
-  position: sticky;
-  top: 0;
-  z-index: 1000; /* Ensures the header stays above other content */
-  width: 100%; /* Ensures the header spans the full width of the screen */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: top 0.3s ease; /* Smooth transition for showing and hiding */
 }
 
-.header .title {
-  font-size: 36px; /* Increased font size for the header text */
-  font-weight: bold;
-  color: #fff;
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.header nav {
-  display: flex;
-  justify-content: flex-end; /* Aligns navigation links to the right */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
 }
 
-.header nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
 }
 
-.header nav ul li {
-  margin: 0 15px; /* Increased margin between each list item */
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-.header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 15px; /* Increased padding for larger clickable area */
-  font-size: 18px; /* Increased font size for nav links */
+.nav-links a:hover {
+    color: var(--primary-color);
 }
 
-.header nav ul li a:hover {
-  text-decoration: underline;
-  cursor: pointer;
-  color: #f5d020;
-}
-
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .header nav ul {
-      flex-direction: column;
-      align-items: flex-start;
-      width: 100%;
-  }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: var(--bg-color);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        padding: 1rem;
+    }
 
-  .header nav ul li {
-      margin: 15px 0; /* Increased margin between each list item in vertical layout */
-  }
+    .nav-links.active {
+        display: flex;
+    }
 
-  .header .title {
-      font-size: 28px; /* Reduced font size for smaller screens */
-  }
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: var(--text-color);
+        margin: 4px 0;
+        transition: all 0.3s ease;
+    }
 }
-
 
 /* Hero Section */
 .hero {
