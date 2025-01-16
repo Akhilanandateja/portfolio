@@ -118,10 +118,13 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap; /* Allows wrapping of nav items */
 }
 
 .header nav ul li {
   margin: 0 15px; /* Increased margin between each list item */
+  width: 33.33%; /* Ensures each item takes up 1/3rd of the available space */
+  box-sizing: border-box; /* Prevents overflow by including padding in width calculation */
 }
 
 .header nav ul li a {
@@ -129,6 +132,8 @@ body {
   text-decoration: none;
   padding: 15px; /* Increased padding for larger clickable area */
   font-size: 18px; /* Increased font size for nav links */
+  display: block; /* Ensures each link fills its li container */
+  text-align: center; /* Centers the text in the nav link */
 }
 
 .header nav ul li a:hover {
@@ -138,20 +143,35 @@ body {
 }
 
 @media (max-width: 768px) {
+  .header {
+    padding: 15px 30px; /* Adjusted padding for mobile screens */
+  }
+
   .header nav ul {
-      flex-direction: column;
-      align-items: flex-start;
-      width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    display: grid; /* Changed to grid layout for 3x3 */
+    grid-template-columns: repeat(3, 1fr); /* Divides the nav links into 3 columns */
   }
 
   .header nav ul li {
-      margin: 15px 0; /* Increased margin between each list item in vertical layout */
+    margin: 0; /* Remove margin for vertical layout */
+    text-align: center; /* Centers text within each list item */
   }
 
   .header .title {
-      font-size: 28px; /* Reduced font size for smaller screens */
+    font-size: 28px; /* Reduced font size for smaller screens */
+    margin-right: 20px; /* Add some margin to the right of the title */
+  }
+
+  .header .title, .header nav {
+    width: 100%; /* Makes sure both title and nav use the full width */
+    display: flex;
+    justify-content: flex-start; /* Aligns title to the left */
   }
 }
+
 
 
 /* Hero Section */
