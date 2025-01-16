@@ -161,8 +161,8 @@ body {
   }
 
   .header .title {
-    font-size: 28px; /* Reduced font size for smaller screens */
-    margin-right: 20px; /* Add some margin to the right of the title */
+    font-size: 18px; /* Reduced font size for smaller screens */
+    margin-right: 10px; /* Add some margin to the right of the title */
   }
 
   .header .title, .header nav {
