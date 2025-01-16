@@ -96,7 +96,7 @@ body {
     z-index: 1000;
     transition: top 0.3s ease; /* Smooth transition for showing and hiding */
     padding: 30px 40px; /* Increased padding for more space */
-    background-color: #ffffff;
+    background-color: black;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
@@ -114,7 +114,7 @@ body {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #2563eb;
+    color: #D14836;
 }
 
 .nav-links {
@@ -125,13 +125,13 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #1f2937;
+    color: white;
     font-weight: 500;
     transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #2563eb;
+    color: #f5d020;
 }
 
 /* Responsive Styles */
@@ -139,7 +139,7 @@ body {
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: #ffffff;
+        background-color: black;
         position: absolute;
         top: 100%;
         right: 0;
@@ -159,7 +159,7 @@ body {
     .hamburger div {
         width: 25px;
         height: 3px;
-        background-color: #ffffff;
+        background-color: black;
         margin: 4px 0;
         transition: all 0.3s ease;
     }
