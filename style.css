@@ -142,7 +142,7 @@ body {
   color: #f5d020;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .header {
     padding: 15px 30px; /* Adjusted padding for mobile screens */
   }
