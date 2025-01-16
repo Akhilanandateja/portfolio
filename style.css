@@ -112,7 +112,7 @@ body {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #D14836;
+    color: #D14836; /* Color for logo */
 }
 
 .nav-links {
@@ -129,39 +129,60 @@ body {
 }
 
 .nav-links a:hover {
-    color: #f5d020;
+    color: #f5d020; /* Hover color */
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    z-index: 9999; /* Ensure hamburger appears above other content */
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white; /* Hamburger icon color */
+    margin: 4px 0;
+    transition: all 0.3s ease;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    /* Navbar links on mobile */
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: black;
+        background-color: black; /* Maintain background color */
         position: absolute;
         top: 100%;
         right: 0;
         width: 100%;
         padding: 1rem;
+        gap: 1rem; /* Add gap between nav items */
     }
 
     .nav-links.active {
-        display: flex;
+        display: flex; /* Display the nav links when active */
     }
 
+    /* Display hamburger on mobile */
     .hamburger {
-        display: block;
-        cursor: pointer;
+        display: block; /* Show hamburger on small screens */
     }
 
-    .hamburger div {
-        width: 25px;
-        height: 3px;
-        background-color: black;
-        margin: 4px 0;
-        transition: all 0.3s ease;
+    /* Adjust the nav-links style when mobile menu is open */
+    .nav-links a {
+        color: white; /* Ensure text color remains white */
+        font-weight: 500;
+        text-align: center; /* Center text */
+    }
+
+    .nav-links a:hover {
+        color: #f5d020; /* Maintain hover effect */
     }
 }
+
 
 /* Hero Section */
 .hero {
