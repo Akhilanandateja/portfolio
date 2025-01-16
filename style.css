@@ -99,6 +99,8 @@ body {
     background-color: black;
     color: #fff;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-content {
