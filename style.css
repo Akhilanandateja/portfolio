@@ -155,6 +155,7 @@ body {
     .hamburger {
         display: block;
         cursor: pointer;
+      color:white;
     }
 
     .hamburger div {
