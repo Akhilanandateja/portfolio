@@ -8,6 +8,9 @@
   scroll-behavior: smooth;
   scroll-padding-top: 8rem;
 }
+#about, #education, #experience, #skills, #projects, #connect {
+  padding: 20px; /* Same padding for all sections */
+}
 
 @keyframes popIn {
   0% {
@@ -19,44 +22,41 @@
     opacity: 1;
   }
 }
-
 body {
   line-height: 1.6;
   background-color: black; /* Light background for contrast */
   color: white; /* Dark font color for contrast */
 }
-
 /* Go to Top Button */
-.go-to-top-button {
-  position: fixed; /* Fix the button to the viewport */
-  right: 20px; /* Distance from the right edge */
-  bottom: 80px; /* Distance from the bottom edge */
-  background: linear-gradient(135deg, #6e8efb, #a777e3); /* Gradient background */
-  color: white; /* Button text color */
-  padding: 10px 15px; /* Padding for the button */
-  border: none; /* Remove border */
-  border-radius: 30px; /* Rounded corners */
-  text-decoration: none; /* Remove underline */
-  font-size: 1rem; /* Font size */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Shadow for depth */
-  transition: background-color 0.3s, transform 0.3s; /* Transition effects */
-  z-index: 1000; /* Ensure the button is above other content */
-  display: flex; /* Use flexbox for alignment */
-  align-items: center; /* Center icon and text vertically */
-  opacity: 0; /* Initially hidden */
-  visibility: hidden; /* Initially hidden */
+#upButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #8959c5;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: none; /* Initially hidden */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+#upButton:hover {
+  background-color: #8959c5;
+  transform: scale(1.1);
 }
 
 /* Show the button when scrolling down */
 .show {
   opacity: 1; /* Show the button */
   visibility: visible; /* Make it visible */
-}
-
-/* Hover effect for Go to Top button */
-.go-to-top-button:hover {
-  background: linear-gradient(135deg, #597df3, #7441b4); /* Darker gradient on hover */
-  transform: translateY(-2px); /* Lift effect on hover */
 }
 
 /* Download Resume Button */
@@ -95,9 +95,12 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     transition: top 0.3s ease; /* Smooth transition for showing and hiding */
-    padding: 30px 40px; /* Increased padding for more space */
+    padding: 0 30px; /* Increased padding for more space */
     background-color: black;
+    color: #fff;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-content {
@@ -112,7 +115,7 @@ body {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #D14836; /* Color for logo */
+    color: var(--primary-color);
 }
 
 .nav-links {
@@ -123,66 +126,46 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
     font-weight: 500;
     transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #f5d020; /* Hover color */
-}
-
-/* Hamburger Menu */
-.hamburger {
-    display: none; /* Hidden by default */
-    cursor: pointer;
-    z-index: 9999; /* Ensure hamburger appears above other content */
-}
-
-.hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: white; /* Hamburger icon color */
-    margin: 4px 0;
-    transition: all 0.3s ease;
+    color: var(--primary-color);
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    /* Navbar links on mobile */
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: black; /* Maintain background color */
+        background-color: var(--bg-color);
         position: absolute;
         top: 100%;
         right: 0;
         width: 100%;
         padding: 1rem;
-        gap: 1rem; /* Add gap between nav items */
     }
 
     .nav-links.active {
-        display: flex; /* Display the nav links when active */
+        display: flex;
     }
 
-    /* Display hamburger on mobile */
     .hamburger {
-        display: block; /* Show hamburger on small screens */
+        display: block;
+        cursor: pointer;
+      color:white;
     }
 
-    /* Adjust the nav-links style when mobile menu is open */
-    .nav-links a {
-        color: white; /* Ensure text color remains white */
-        font-weight: 500;
-        text-align: center; /* Center text */
-    }
-
-    .nav-links a:hover {
-        color: #f5d020; /* Maintain hover effect */
+    .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: var(--text-color);
+        margin: 4px 0;
+        transition: all 0.3s ease;
     }
 }
-
 
 /* Hero Section */
 .hero {
@@ -609,7 +592,6 @@ h2 {
   .social-icons a {
     margin: 0.5rem 0;
   }
-
   .education-section,
   .experience-section {
     padding: 15px; /* Adjust padding for smaller screens */
@@ -750,9 +732,12 @@ h2 {
 }
 /* Education Section */
 .education-section {
-  padding: 40px;
-  background-color: black;
-  text-align: left; /* Align text to the left */
+   max-width: 90%; /* Maximum width for the about section */
+  margin: 40px auto; /* Center the section with margin */
+  padding: 10px; /* Padding inside the section */
+  background-color: black; /* White background for the section */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .education-cards {
@@ -818,12 +803,12 @@ h2 {
 .experience-section {
   display: flex; /* Use flexbox to align items */
   flex-direction: column; /* Stack title and content vertically */
-  background-color: black; /* Dark gray background for the section */
+  max-width: 90%; /* Maximum width for the about section */
+  margin: 40px auto; /* Center the section with margin */
+  padding: 10px; /* Padding inside the section */
+  background-color: black; /* White background for the section */
   border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* Subtle shadow */
-  padding: 30px; /* Padding for the section */
-  max-width: 100%; /* Limit the maximum width */
-  margin: 20px auto; /* Center the section with margin */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .experience-title {
@@ -931,7 +916,12 @@ h2 {
 
 /* Skills Section */
 .skills-section {
-  padding: 20px; /* Add some padding around the section */
+  max-width: 90%; /* Maximum width for the about section */
+  margin: 40px auto; /* Center the section with margin */
+  padding: 10px; /* Padding inside the section */
+  background-color: black; /* White background for the section */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .skills-container {
@@ -1080,28 +1070,6 @@ h2 {
   color: #000; /* Black text on hover */
 }
 
-/* Contact Section */
-.contact {
-  padding: 4rem 2rem;
-  background: black;
-  color: white;
-  text-align: left; /* Align text to the left */
-}
-
-.con-h2 {
-  margin-bottom: 20px;
-  color: #f5d020; /* Bright yellow for the heading */
-  letter-spacing: 1px;
-  font-size: 1em; /* Increased font size */
-}
-
-.contact-content {
-  display: flex; /* Use flexbox to align items */
-  justify-content: space-between; /* Space between contact info and contact form */
-  align-items: flex-start; /* Align items to the start */
-  margin-top: 20px; /* Space above the content */
-}
-
 /* Style all font awesome icons */
 .fa {
   padding: 10px; /* Decreased padding */
@@ -1176,227 +1144,128 @@ h2 {
   }
 }
 
-.contact-section {
+
+/* Contact Section */
+.contact-container {
   display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: black;
-}
-
-.social-icons {
-  display: flex; /* Align icons in a row */
-  justify-content: center; /* Center the icons */
-  align-items: center; /* Center vertically */
-}
-
-.icon-container {
-  position: relative; /* Position relative for tooltip positioning */
-  margin: 0 15px; /* Space between icons */
-}
-
-.tooltip {
-  visibility: hidden; /* Hide tooltip by default */
-  width: 100px; /* Set width of tooltip */
-  background-color: black; /* Background color */
-  color: white; /* Text color */
-  text-align: center; /* Center text */
-  border-radius: 5px; /* Rounded corners */
-  padding: 5px; /* Padding */
-  position: absolute; /* Position absolute */
-  bottom: 125%; /* Position above the icon */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Center tooltip */
-  opacity: 0; /* Hide tooltip */
-  transition: opacity 0.3s; /* Smooth transition */
-  z-index: 1; /* Ensure tooltip is above other content */
-}
-
-.icon-container:hover .tooltip {
-  visibility: visible; /* Show tooltip on hover */
-  opacity: 1; /* Make tooltip visible */
-}
-
-.social-icons {
-  flex: 1;
-  display: flex;
-  justify-content: center; /* Center the icons horizontally */
-  align-items: center; /* Center the icons vertically */
-}
-
-.icon {
-  margin: 0 15px; /* Add more space between icons */
-}
-
-.icon img {
-  width: 40px;
-  height: 40px;
-  transition: transform 0.3s;
-}
-
-.icon img:hover {
-  transform: scale(1.1);
-}
-
-.email-message {
-  flex: 1;
-  padding: 20px;
-  background-color: #1e1e1e;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.email-message h2 {
-  margin-bottom: 20px;
-  color: #f5d020; /* Bright yellow for the heading */
-  letter-spacing: 1px;
-  font-size: 1em; /* Increased font size */
-}
-
-.email-message label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.email-message input,
-.email-message textarea {
+  gap: 4rem;
+  max-width: 1000px;
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #cccccc36;
-  border-radius: 4px;
+  margin: 0 auto;
+  color: white;
+  text-align: left;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeInUp 0.5s forwards;
+  margin: 40px auto; /* Center the section with margin */
+  padding: 10px; /* Padding inside the section */
+  background-color: black; /* White background for the section */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+
 }
 
-.email-message button {
-  background-color: black; /* Button background color */
-  color: white; /* Button text color */
-  padding: 10px 20px; /* Button padding */
-  border: none; /* Remove border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s; /* Transition for hover effect */
-  display: flex; /* Use flexbox for button */
-  align-items: center; /* Center icon and text */
-}
-
-.email-message button:hover {
-  background-color: #DC143C; /* Darker shade on hover */
-}
-
-.contact-section {
-  display: flex;
-  justify-content: center;
-  gap: 90px; /* Increase the space between items */
-  padding: 60px 20px;
-  flex-wrap: wrap;
+.contact-info {
+  flex: 1;
 }
 
 .contact-item {
-  background-color: none;
-  border-radius: 50%;
-  width: 140px;
-  height: 140px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color:black;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color:#DC143C;
+  margin-right: 1rem;
+}
+
+.contact-form {
+  flex: 2;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 15px;
-  text-align: left; /* Align text to the left */
+  gap: 1rem;
 }
 
-.contact-item .icon {
-  font-size: 28px; /* Larger icon size */
-  color: #D14836;
-  margin-bottom: 15px; /* Add more space between the icon and text */
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
 }
 
-.contact-item h3 {
-  font-size: 16px;
-  margin: 0;
-  text-transform: uppercase;
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: whitesmoke;
 }
 
-.contact-item p {
-  font-size: 13px;
-  margin: 8px 0 0;
-  color: #aaa;
+.contact-form textarea {
+  height: 150px;
+  resize: none;
 }
 
-.contact-item a {
-  color: #D14836;
-  text-decoration: none;
+.contact-form button {
+  padding: 1rem 2rem;
+  background-color: #DC143C;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
-.contact-item a:hover {
-  text-decoration: underline;
+.contact-form button:hover {
+  background-color:rgb(59, 56, 56);
 }
 
-.social-links {
-  margin-top: 10px; /* Space above the social links */
-  display: flex; /* Use flexbox for alignment */
-  justify-content: center; /* Center the icons */
-}
-
-.social-links a {
-  margin: 0 10px; /* Space between icons */
-  font-size: 24px; /* Size of the icons */
-  color: #D14836; /* Icon color */
-  transition: color 0.3s; /* Transition for hover effect */
-}
-
-.social-links a:hover {
-  color: #f5d020; /* Change color on hover */
-}
-
-/* Responsive Styles for Contact Section */
+/* Additional Responsive Styles */
 @media (max-width: 768px) {
-  .contact-section {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items */
-    gap: 40px; /* Adjust spacing for smaller screens */
+  .contact-container {
+      flex-direction: column; /* Stack contact info and form */
+      gap: 2rem;
   }
 
   .contact-item {
-    margin-bottom: 20px; /* Space between items */
+      flex-direction: column; /* Stack icon and text */
+      align-items: flex-start;
   }
 
-  .email-message {
-    padding: 15px; /* Adjust padding for smaller screens */
-  }
-
-  .email-message h2 {
-    font-size: 1.2em; /* Adjust font size for mobile */
-  }
-
-  .email-message input,
-  .email-message textarea {
-    font-size: 0.9em; /* Adjust font size for inputs */
-  }
-
-  .email-message button {
-    font-size: 0.9em; /* Adjust font size for button */
+  .contact-form {
+      width: 100%; /* Full width for the form */
   }
 }
 
 @media (max-width: 480px) {
   .contact-item {
-    width: 120px; /* Adjust width for mobile */
-    height: 120px; /* Adjust height for mobile */
+      padding: 0.5rem; /* Reduce padding for smaller screens */
   }
 
-  .contact-item h3 {
-    font-size: 14px; /* Adjust font size for mobile */
+  .contact-form input,
+  .contact-form textarea {
+      font-size: 0.9rem; /* Smaller font size */
   }
 
-  .contact-item p {
-    font-size: 12px; /* Adjust font size for mobile */
-  }
-
-  .contact-item .icon {
-    font-size: 24px; /* Adjust icon size for mobile */
-  }
-
-  .social-links a {
-    font-size: 18px; /* Adjust icon size for mobile */
+  .contact-form button {
+      font-size: 0.9rem; /* Smaller button font size */
   }
 }
 
